@@ -72,8 +72,8 @@ video {
 	border: 0;
 	outline: 0;
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
-
 article,
 aside,
 details,
@@ -115,10 +115,11 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ",
-		"Meiryo", sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-display: swap;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-weight: 500;
 }
 
 h1,
@@ -161,7 +162,11 @@ del {
 }
 
 img {
-	vertical-align: top;
+	vertical-align: middle;
+	width: 100%;
+	max-width: 100%;
+	display: inline-block;
+	height: auto;
 }
 
 a {
