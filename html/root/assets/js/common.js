@@ -89,3 +89,16 @@ $(window).scroll(function(){
   }
   positionBf = positionAf;
 });
+
+document.getElementById('dekstone').onmouseover = function() {
+  document.getElementById('silestone').classList.remove("show");
+  document.getElementById('silestone').classList.add("hide");
+  document.getElementById('dekstone').classList.remove("hide");
+  document.getElementById('dekstone').classList.add("show");
+}
+document.getElementById('silestone').onmouseover = function() {
+  document.getElementById('silestone').classList.add("show");
+  document.getElementById('silestone').classList.remove("hide");
+  document.getElementById('dekstone').classList.remove("show");
+  document.getElementById('dekstone').classList.add("hide");
+}
