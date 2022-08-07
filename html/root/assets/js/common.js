@@ -39,7 +39,7 @@ function toggleMenu(){
     '</svg>'+
     '              </li>';
     let html_appent= '<li class="c-menu c-menu__logo"><a href="#"><picture>'+
-    '                  <source srcset="assets/images/logo.webp" type="image/webp"><img src="assets/images/logo.png" data-src="assets/images/logo.png" alt="logo">'+
+    '                 <img src="assets/images/logo.svg" data-src="assets/images/logo.svg" alt="cosentino">'+
     '                </picture></a>'+
     '              </li>';
     let html_appentLang = '<li class="c-menu c-menu__logo"><a href="#">Tiếng Việt</a>'+
