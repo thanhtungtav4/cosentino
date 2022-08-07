@@ -1,5 +1,8 @@
 .c-menu{
 	z-index: 1;
+	@include sp{
+		z-index: unset;
+	}
 	&_sub{
 		position: absolute;
 		width: 100%;
@@ -107,8 +110,17 @@
 		top: 66px;
 		height: 66px;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		@include min(768px){
+			top: 44px;
+			padding-top: 21px;
+		}
 		> .c-menu_subinner{
 			padding: 0;
+			ul{
+				@include sp{
+					background-color: rgba(0, 0, 0, 0.90);
+				}
+			}
 		}
 	}
 }
