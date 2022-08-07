@@ -1,0 +1,119 @@
+.intro {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        flex-wrap: wrap;
+    }
+    &__box {
+        width:calc(50% - 8px);
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        @include sp {
+            width: 100%;
+        }
+    }
+    &__video {
+        @include sp {
+            margin-bottom: 16px;
+        }
+      
+        overflow: hidden    ;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        background: rgb(241, 235, 235);
+        padding: 16px;
+        h4 {
+            @include font-config(16px, 400);
+            @include text-spacing();
+            margin-bottom: 8px;
+        }
+        p {
+            @include font-config(14px, 400);
+            @include text-spacing();
+            overflow: hidden;
+            -webkit-line-clamp: 9;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+        }
+        a {
+            display: block;
+            @include font-config(14px, 600);
+            @include text-spacing();
+            color: #484848;
+            text-decoration: none;
+            margin-top: 4px;
+        }
+    }
+}
+.showroom {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        flex-wrap: wrap;
+    }
+    &__slide {
+        width: calc(50% - 8px);
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        overflow: hidden;
+        @include sp {
+            width: 100%;
+            margin-top: 16px;
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: 10px;
+            background: #fff;
+            z-index: 1;
+            visibility: initial;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+    }
+    .slick-next {
+        right: 0;
+        &::after {
+            content: "";
+            background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.35452 4.44768L14.9136 11.9413L7.2512 19.5374C7.08415 19.703 7 19.9109 7 20.1442C7 20.3775 7.08415 20.5854 7.2512 20.751C7.33148 20.8306 7.42396 20.8942 7.52871 20.9374C7.63355 20.9808 7.74448 21.0011 7.85845 21.0011C7.96612 21.0011 8.07141 20.9788 8.17254 20.9402C8.28359 20.8979 8.38185 20.8341 8.4657 20.751L16.7488 12.5396C16.9139 12.3759 17 12.1717 17 11.9413C17 11.711 16.9139 11.5068 16.7488 11.3431L8.58624 3.25123C8.41906 3.08549 8.20811 3.0011 7.97038 3.0011C7.73266 3.0011 7.5217 3.08549 7.35452 3.25123C7.1894 3.41492 7.10332 3.61912 7.10332 3.84946C7.10332 4.07979 7.1894 4.28399 7.35452 4.44768Z' fill='%23868686'/%3E%3C/svg%3E%0A");
+            position: absolute;
+            width: 20px;
+            height: 24px;
+            right: 20px;
+            visibility: initial;
+            z-index: 2;
+            top: 8px;
+        }
+    }
+    .slick-prev {
+        left: 0;
+        &::after {
+            content: "";
+            background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_912_140589)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.6455 4.44683L9.08637 11.9405L16.7488 19.5366C16.9158 19.7022 17 19.91 17 20.1434C17 20.3767 16.9158 20.5845 16.7488 20.7501C16.6685 20.8297 16.576 20.8933 16.4713 20.9366C16.3664 20.9799 16.2555 21.0002 16.1415 21.0002C16.0339 21.0002 15.9286 20.9779 15.8275 20.9394C15.7164 20.897 15.6182 20.8332 15.5343 20.7501L7.2512 12.5387C7.08608 12.375 7 12.1708 7 11.9405C7 11.7102 7.08608 11.506 7.2512 11.3423L15.4138 3.25037C15.5809 3.08464 15.7919 3.00024 16.0296 3.00024C16.2673 3.00024 16.4783 3.08464 16.6455 3.25037C16.8106 3.41407 16.8967 3.61827 16.8967 3.8486C16.8967 4.07894 16.8106 4.28314 16.6455 4.44683Z' fill='%23B6B6B6'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_912_140589'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: 23px;
+            visibility: initial;
+            z-index: 2;
+            top: 9px;
+        }
+    } 
+}

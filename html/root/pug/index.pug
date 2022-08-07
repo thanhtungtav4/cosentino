@@ -23,6 +23,15 @@ block after_page
           lazyLoad: 'ondemand',
           });
       });
+      $(".showroom__slide").slick({
+          infinite: true,
+          autoplay: false,
+          dots: false,
+          arrows: true,
+          autoplaySpeed: 4000
+      });
+
+     
 block container
   .c-carousel
     .c-carousel_inner
@@ -39,5 +48,39 @@ block container
             source(srcset=path+"assets/images/carousel.webp" type="image/webp")
             img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='carousel' loading="lazy" width="1512" height="600")
   .l-container
-    include ./_modules/heading-primary
-    
+    section.i-intros
+      include ./_modules/heading-primary
+      .intro
+        .intro__video.intro__box
+          video(width='' height='' controls='')
+            source(src='movie.mp4' type='video/mp4')
+            source(src='movie.ogg' type='video/ogg')
+        .intro__content.intro__box
+          h4 Text Giới thiệu Heading 
+          p Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino
+          a(href="#") xem thêm  
+    //- showroom
+    section.showrooms
+      include ./_modules/heading-primary
+      .showroom
+        .intro__content.intro__box
+            h4 Text Giới thiệu Heading 
+            p Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino
+            a(href="#") xem thêm  
+        .showroom__slide
+          .showroom__slide__item
+            a(href)
+              .m-product__img
+                picture
+                  source(srcset=path+"assets/images/product_item.avif" type="image/avif")
+                  source(srcset=path+"assets/images/product_item.webp" type="image/webp")
+                  img.lazyload(src=path+"assets/images/product_item.jpg" data-src=path+"assets/images/product_item.jpg" alt='Logo' loading="lazy" width="" height="")
+          .showroom__slide__item
+            a(href)
+              .m-product__img
+                picture
+                  source(srcset=path+"assets/images/product_item.avif" type="image/avif")
+                  source(srcset=path+"assets/images/product_item.webp" type="image/webp")
+                  img.lazyload(src=path+"assets/images/product_item.jpg" data-src=path+"assets/images/product_item.jpg" alt='Logo' loading="lazy" width="" height="")
+
+

@@ -221,9 +221,50 @@
           </div>
         </div>
         <div class="l-container">
-          <div class="heading__primary">
-            <h2>Text Giới thiệu Heading 1</h2>
-          </div>
+          <section class="i-intros">
+            <div class="heading__primary">
+              <h2>Text Giới thiệu Heading 1</h2>
+            </div>
+            <div class="intro">
+              <div class="intro__video intro__box">
+                <video width="" height="" controls="">
+                  <source src="movie.mp4" type="video/mp4">
+                  <source src="movie.ogg" type="video/ogg">
+                </video>
+              </div>
+              <div class="intro__content intro__box">
+                <h4>Text Giới thiệu Heading </h4>
+                <p>Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino</p><a href="#">xem thêm  </a>
+              </div>
+            </div>
+          </section>
+          <section class="showrooms">
+            <div class="heading__primary">
+              <h2>Text Giới thiệu Heading 1</h2>
+            </div>
+            <div class="showroom">
+              <div class="intro__content intro__box">
+                <h4>Text Giới thiệu Heading </h4>
+                <p>Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino</p><a href="#">xem thêm  </a>
+              </div>
+              <div class="showroom__slide">
+                <div class="showroom__slide__item"><a href>
+                    <div class="m-product__img">
+                      <picture>
+                        <source srcset="assets/images/product_item.avif" type="image/avif">
+                        <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="" height="">
+                      </picture>
+                    </div></a></div>
+                <div class="showroom__slide__item"><a href>
+                    <div class="m-product__img">
+                      <picture>
+                        <source srcset="assets/images/product_item.avif" type="image/avif">
+                        <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="" height="">
+                      </picture>
+                    </div></a></div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
       <footer class="c-footer">
@@ -354,6 +395,15 @@
           lazyLoad: 'ondemand',
           });
       });
+      $(".showroom__slide").slick({
+          infinite: true,
+          autoplay: false,
+          dots: false,
+          arrows: true,
+          autoplaySpeed: 4000
+      });
+      
+      
     </script>
   </body>
 </html>
