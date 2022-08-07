@@ -42,15 +42,12 @@ function toggleMenu(){
     '                 <img src="assets/images/logo.svg" data-src="assets/images/logo.svg" alt="cosentino">'+
     '                </picture></a>'+
     '              </li>';
-    let html_appentLang = '<li class="c-menu c-menu__logo"><a href="#">Tiếng Việt</a>'+
-    '              </li>';
     let is_true =  document.getElementsByClassName("c-menu__logo")[0];
     if(is_true == undefined){
 
 
       let select_appent = document.getElementsByClassName("c-header_menu")[0];
       select_appent.insertAdjacentHTML("afterbegin", html_appent);
-      select_appent.insertAdjacentHTML("beforeend", html_appentLang);
       select_appent.insertAdjacentHTML("afterbegin", html_appentlose);
     }
 
