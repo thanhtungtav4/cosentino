@@ -90,6 +90,10 @@
 				visibility: visible;
 				transform: translateX(0);
 				z-index: 1;
+				border-top: 1px solid rgba(255, 255, 255, 0.3);
+				@include min(768px){
+					margin-top: 10px;
+				}
 			}
 		}
 	}
@@ -97,23 +101,14 @@
 }
 
 .bg-full{
-	// &:hover{
-	// 	.c-menu_subinner {
-	// 		#silestone{
-	// 			> a{
-	// 				border-bottom:  1.5px solid;
-	// 			}
-	// 			.c-menu_sub{
-	// 				visibility: visible;
-	// 				transform: translateX(0);
-	// 				z-index: 1;
-	// 			}
-	// 		}
-	// 	}
-	// }
-	
-	.c-menu_sub{
-		//background: rgba(0, 0, 0, 0.85);
-		// backdrop-filter: blur(8px);
+	> .c-menu_sub{
+		padding: 0;
+		position: absolute;
+		top: 66px;
+		height: 66px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		> .c-menu_subinner{
+			padding: 0;
+		}
 	}
 }
