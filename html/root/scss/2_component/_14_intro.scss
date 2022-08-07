@@ -61,6 +61,7 @@
         border: 1px solid $border-color;
         border-radius: 4px;
         overflow: hidden;
+        height: 300px;
         @include sp {
             width: 100%;
             margin-top: 16px;
