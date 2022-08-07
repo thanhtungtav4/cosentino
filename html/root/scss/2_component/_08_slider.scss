@@ -20,8 +20,8 @@
             }
             button {
                 display: block;
-                width: 2rem;
-                height: 2rem;
+                width: 1rem;
+                height: 1rem;
                 @include sp{
                     width: 1rem;
                     height: 1rem;
@@ -36,5 +36,26 @@
                 background-color: #EB6A6A;
             }
         
+    }
+    &_item{
+        position: relative;
+    }
+    .m-btn{
+        position: absolute;
+        bottom: 66px;
+        background: #ffffff;
+        color: #232323;
+        padding: 8px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.7rem;
+        font-weight: 600;
+        left: 42%;
+        right: 42%;
+        width: 150px;
+        &:hover{
+            background: #232323;
+            color: #ffffff;
+        }
     }
 }
