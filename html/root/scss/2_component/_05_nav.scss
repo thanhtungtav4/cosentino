@@ -35,20 +35,26 @@
 			backdrop-filter: blur(8px);
 			padding: 2rem 0 5rem;
 			dl{
-				font-size: 1.4rem;
+				font-size: 1.6rem;
 				dt{
 					font-weight: 700;
 					margin-bottom: 1rem;
+					color: white;
 				}
 				dd{
 					a{
 						font-style: normal;
 						font-weight: 300;
-						font-size: 1.4rem;
+						font-size: 1.5rem;
 						line-height: 1.2;
 					}
 					padding: 5px 0;
 				}
+			}
+			ul{
+				@include flex-center;
+				text-align: center;
+				width: 100%;
 			}
 		}
 		.ttl{
@@ -67,6 +73,42 @@
 				z-index: 1;
 			}
 		}
+		&.hide{
+			.c-menu_sub{
+				transform: translateX(-100%);
+				visibility: hidden;
+				z-index: 0;
+			}
+		}
+		&.show{
+			> a{
+				border-bottom: 1.5px solid;
+			}
+			.c-menu_sub{
+				background: rgba(0,0,0,.44);
+				backdrop-filter: blur(8px);
+				visibility: visible;
+				transform: translateX(0);
+				z-index: 1;
+				border-top: 1px solid rgba(255, 255, 255, 0.3);
+				@include min(768px){
+					margin-top: 10px;
+				}
+			}
+		}
 	}
 
+}
+
+.bg-full{
+	> .c-menu_sub{
+		padding: 0;
+		position: absolute;
+		top: 66px;
+		height: 66px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		> .c-menu_subinner{
+			padding: 0;
+		}
+	}
 }
