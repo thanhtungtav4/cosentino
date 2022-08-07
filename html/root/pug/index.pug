@@ -25,7 +25,7 @@ block after_page
       });
       $(".showroom__slide").slick({
           infinite: true,
-          autoplay: false,
+          autoplay: true,
           dots: false,
           arrows: true,
           autoplaySpeed: 4000
@@ -88,8 +88,9 @@ block container
       include ./_modules/heading-primary
       include ./_modules/categories
     
-    //- cart product
+    //- cart product new
     section.product 
       include ./_modules/heading-primary
-        
+      include ./_modules/cart_product
       
+    
