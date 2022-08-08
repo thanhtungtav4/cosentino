@@ -121,4 +121,25 @@ block container
         .c-product__slide__item
           include ./_modules/cart_product
       
-    
+    //- product tab
+    section.product__tab 
+      include ./_modules/heading-primary
+      .tabs-product
+        ul.tabs-product__nav
+          li
+            a(href="#tab1") Đá Granite Trắng
+          li
+            a(href="#tab2") Đá Granite Đỏ
+          li
+            a(href="#tab3") Đá Granite Vàng
+          li
+            a(href="#tab4") Đá Granite Tím
+        .tabs-product__stage
+          #tab-1
+            p abc
+          #tab-2
+            p tab2
+          #tab-3
+            p tab3 
+          #tab-4
+            p tab4
