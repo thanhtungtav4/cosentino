@@ -92,4 +92,23 @@
     &__slide__item {
         margin: 0 8px;
     }
+    
+}
+.c-product__slide {
+    .slick-next {
+        &::before {
+            right: -16px;
+        }
+        &::after {
+            right: -4px;
+        }
+    } 
+    .slick-prev {
+        &::before {
+            right: 36px;
+        }
+        &::after {
+            right: 50px;
+        }
+    } 
 }
