@@ -30,7 +30,23 @@ block after_page
           arrows: true,
           autoplaySpeed: 4000
       });
-
+      
+      $('.c-product__slide').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1, 
+        arrows: true, 
+        dots: false,
+        initialSlide: 3,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
      
 block container
   .c-carousel
@@ -91,6 +107,18 @@ block container
     //- cart product new
     section.product 
       include ./_modules/heading-primary
-      include ./_modules/cart_product
+      .c-product__slide
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
       
     

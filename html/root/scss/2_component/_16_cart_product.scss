@@ -1,0 +1,95 @@
+.c-product {
+    &__item {
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    &__img {
+        height: 300px;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border: 1px solid $border-color;
+            transition: all .3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__body {
+        padding: 16px;
+        a {
+            text-decoration: none
+        }
+        h4 {
+            @include font-config(14px, 500);
+            @include text-spacing();
+            color: #101010;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+        }
+    }
+    &__code {
+        margin-bottom: 4px;
+        span{
+            padding: 2px 4px;
+            align-items: center;
+            background: #f3f3f3;
+            border: 1px solid #e7e7e7;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    }
+    &__desc {
+        li {
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+            span {
+                @include font-config(14px, 400);
+                @include text-spacing();
+                color: #505050;
+                margin-right: 4px;
+            }
+            p {
+                @include font-config(14px, 700);
+                @include text-spacing();
+                color: #505050;
+            }
+        }
+    }
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        span {
+            @include font-config(14px, 400);
+            @include text-spacing();
+            color: #505050;           
+        }
+        p {
+            @include font-config(14px, 700);
+            @include text-spacing();
+            color: #66d080;
+        }
+    }
+    .slick-list {
+        margin: 0 -8px;
+    }
+    &__slide__item {
+        margin: 0 8px;
+    }
+}
