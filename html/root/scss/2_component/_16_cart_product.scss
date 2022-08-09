@@ -5,8 +5,9 @@
         overflow: hidden;
     }
     &__img {
-        height: 300px;
+        height: 250px;
         width: 100%;
+        overflow: hidden;
         img {
             height: 100%;
             width: 100%;
@@ -70,15 +71,15 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        img {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
+        svg {
+            padding: 2px;
+            border-radius: 999px;
+            border: 1px solid $border-color;
         }
         span {
             @include font-config(14px, 400);
             @include text-spacing();
-            color: #505050;           
+            color: red;           
         }
         p {
             @include font-config(14px, 700);
