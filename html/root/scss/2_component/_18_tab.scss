@@ -45,6 +45,7 @@
         @include sp {
             display: flex;
             overflow-x: scroll;
+            flex-wrap: unset;
             &::-webkit-scrollbar {
                 display: none;
             }
