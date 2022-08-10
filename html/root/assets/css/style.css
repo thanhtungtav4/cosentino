@@ -1033,7 +1033,9 @@ body.js-active {
 }
 .c-carousel .m-btn {
   position: absolute;
-  bottom: 66px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #ffffff;
   color: #232323;
   padding: 8px 20px;
@@ -1041,8 +1043,6 @@ body.js-active {
   text-decoration: none;
   font-size: 1.7rem;
   font-weight: 600;
-  left: 42%;
-  right: 42%;
   width: 150px;
 }
 .c-carousel .m-btn:hover {
