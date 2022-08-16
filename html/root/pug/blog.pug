@@ -1,0 +1,227 @@
+extends _layout/default
+
+block vars
+  -title        = 'Top'
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'top'
+  -path         = ''
+block before_page
+    link(rel="preload" as="style" type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link( rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+block after_page
+    script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script.
+      $('.b-featured__list').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1, 
+        arrows: true, 
+        dots: false,
+        initialSlide: 3,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+   
+     
+block container
+  .l-container
+    //- 
+    section
+      .b-tag 
+        .b-tag__title
+          h2 Blog & Events
+        .b-tag__body
+          ul 
+            li 
+              a(href="") bathroom 
+            li 
+              a(href="") Cladding
+            li 
+              a(href="") Dekton
+            li 
+              a(href="") bathroom 
+            li 
+              a(href="") Cladding
+            li 
+              a(href="") Dekton
+            li 
+              a(href="") bathroom 
+            li 
+              a(href="") Cladding
+            li 
+              a(href="") Dekton
+
+    //- featured
+    section 
+      .b-featured
+        .heading__primary
+          h2 Featured
+        .b-featured__list
+          .b-featured__item 
+            .b-featured__img 
+              a(href="") 
+                img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg",alt="")
+                .b-featured__box
+                  h3 Changing the world from the kitchen: 10 simple steps to cut down on harmful substances in your kitchen Changing the world from the kitchen: 10 simple steps to cut down on harmful
+                  p This article is the last in the series we started a few days ago with Ruth Uve and María Blanco, founders of ‘Lo Mínimo’, a consultanc...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .b-featured__item 
+            .b-featured__img 
+              a(href="") 
+                img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg",alt="")
+                .b-featured__box
+                  h3 Changing the world from the kitchen: 10 simple steps to cut down on harmful substances in your kitchen Changing the world from the kitchen: 10 simple steps to cut down on harmful
+                  p This article is the last in the series we started a few days ago with Ruth Uve and María Blanco, founders of ‘Lo Mínimo’, a consultanc...This article is the last in the series we started a few days ago with Ruth Uve and María Blanco, founders of ‘Lo Mínimo’, a consultanc founders of ‘Lo Mínimo’, a consultanc founders of ‘Lo Mínimo’, a consultanc...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .b-featured__item 
+            .b-featured__img 
+              a(href="") 
+                img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg",alt="")
+                .b-featured__box
+                  h3 Changing the world from the kitchen: 10 simple steps to cut down on harmful substances in your kitchen Changing the world from the kitchen: 10 simple steps to cut down on harmful
+                  p This article is the last in the series we started a few days ago with Ruth Uve and María Blanco, founders of ‘Lo Mínimo’, a consultanc...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .b-featured__item 
+            .b-featured__img 
+              a(href="") 
+                img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg",alt="")
+                .b-featured__box
+                  h3 Changing the world from the kitchen: 10 simple steps to cut down on harmful substances in your kitchen Changing the world from the kitchen: 10 simple steps to cut down on harmful
+                  p This article is the last in the series we started a few days ago with Ruth Uve and María Blanco, founders of ‘Lo Mínimo’, a consultanc...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+    //- blog item
+    section 
+      .heading__primary
+          h2 Tin tức
+      .blogs__inner
+        .blogs__list
+          .blogs__item 
+            .blogs__item__box
+              .blogs__item__img
+                a(href="" title="blog")
+                  img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg", alt="") 
+              .blogs__item__content
+                a(href="#" title="content") 
+                  h3 Changing the world from the kitchen: 10 simple steps to save energy in your kitchen
+                  p At Cosentino we believe in the importance of small actions. This is why a few days ago we started a series of articles, jointly with Ruth Uv jointly with Ruth Uv jointly with Ruth Uv...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .blogs__item 
+            .blogs__item__box
+              .blogs__item__img
+                a(href="" title="blog")
+                  img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg", alt="") 
+              .blogs__item__content
+                a(href="#" title="content") 
+                  h3 Changing the world from the kitchen: 10 simple steps to save energy in your kitchen
+                  p At Cosentino we believe in the importance of small actions. This is why a few days ago we started a series of articles, jointly with Ruth Uv jointly with Ruth Uv jointly with Ruth Uv...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .blogs__item 
+            .blogs__item__box
+              .blogs__item__img
+                a(href="" title="blog")
+                  img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg", alt="") 
+              .blogs__item__content
+                a(href="#" title="content") 
+                  h3 Changing the world from the kitchen: 10 simple steps to save energy in your kitchen
+                  p At Cosentino we believe in the importance of small actions. This is why a few days ago we started a series of articles, jointly with Ruth Uv jointly with Ruth Uv jointly with Ruth Uv...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .blogs__item 
+            .blogs__item__box
+              .blogs__item__img
+                a(href="" title="blog")
+                  img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg", alt="") 
+              .blogs__item__content
+                a(href="#" title="content") 
+                  h3 Changing the world from the kitchen: 10 simple steps to save energy in your kitchen
+                  p At Cosentino we believe in the importance of small actions. This is why a few days ago we started a series of articles, jointly with Ruth Uv jointly with Ruth Uv jointly with Ruth Uv...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .blogs__item 
+            .blogs__item__box
+              .blogs__item__img
+                a(href="" title="blog")
+                  img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg", alt="") 
+              .blogs__item__content
+                a(href="#" title="content") 
+                  h3 Changing the world from the kitchen: 10 simple steps to save energy in your kitchen
+                  p At Cosentino we believe in the importance of small actions. This is why a few days ago we started a series of articles, jointly with Ruth Uv jointly with Ruth Uv jointly with Ruth Uv...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+          .blogs__item 
+            .blogs__item__box
+              .blogs__item__img
+                a(href="" title="blog")
+                  img(src="https://cdn-com.cosentino.com/wp-content/uploads/2020/12/11-2.jpg", alt="") 
+              .blogs__item__content
+                a(href="#" title="content") 
+                  h3 Changing the world from the kitchen: 10 simple steps to save energy in your kitchen
+                  p At Cosentino we believe in the importance of small actions. This is why a few days ago we started a series of articles, jointly with Ruth Uv jointly with Ruth Uv jointly with Ruth Uv...
+                  .b-featured__propertie 
+                    .b-featured__properties
+                      span Tác giả:
+                      b nguyen
+                    .b-featured__properties
+                      span d/m/y:
+                      b 15/2/2022
+
+
