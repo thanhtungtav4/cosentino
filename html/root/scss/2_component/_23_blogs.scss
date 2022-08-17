@@ -67,10 +67,13 @@
     }
     &__box {
         position: absolute;
-        bottom: 0;
+        bottom: 8px;
+        right: 8px;
+        left: 8px;
         background: #fff;
         padding: 16px;
-        border-radius: 4px 4px 0 0;
+        border-radius: 4px;
+
         h3 {
             font-size: 20px;
             font-weight: 700;
