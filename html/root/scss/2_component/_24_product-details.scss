@@ -1,12 +1,19 @@
 .p-details {
     padding: 40px 0;
+    border-bottom: 1px solid $border-color;
     &__inner {
         display: flex;
         align-items:  center;
         justify-content: space-between;
+        @include sp {
+            flex-wrap: wrap;
+        }
     }
     &__box {
         width: calc(50% - 8px);
+        @include sp {
+            width: 100%;
+        }
         &__slide {
             &__item {
                 border: 1px solid $border-color;
@@ -48,7 +55,10 @@
         border: 1px solid $border-color;
         border-radius: 4px;
         overflow: hidden;
-        height: 500px;
+        height: 400px;
+        @include sp {
+            height: 250px;
+        }
         img {
             object-fit: cover;
             width: 100%;
@@ -56,3 +66,121 @@
         }
     }
 }
+
+// 
+.img_producto_container {
+    width: 100%;
+    height: 600px;
+    @include sp {
+        height: 400px;
+    }
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+    margin: 24px 0;
+}
+.img_producto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s ease-out;
+    cursor: zoom-in;
+}
+  
+.zoom-img{
+    &__product {
+        position: relative;
+    }
+    &__content {
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+        background: #fff;
+        border-radius: 4px;
+        padding: 16px;
+        width: 500px;
+        @include sp {
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            border: 1px solid $border-color;
+        }
+    }
+    &__modal__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $border-color;
+        h4 {
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            color: #101010;
+            text-transform: uppercase;
+        }
+    } 
+    &__modal__btn {
+        .gg-chevron-up {
+            display: none;
+        }
+        &.active {
+            .gg-chevron-up {
+                display: block;
+            }
+            svg {
+                display: none;
+            }
+        }
+    }
+    &__modal__body__box {
+        margin-top: 16px;
+        h3 {
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            color: #101010;
+            text-transform: uppercase;
+        }
+        ul {
+            li {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 150%;
+                letter-spacing: 0.01em;
+                color: #505050;
+                padding: 8px;
+            }
+        }
+    }
+}
+.gg-chevron-up {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px
+   }
+   
+   .gg-chevron-up::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(-45deg);
+    left: 4px;
+    bottom: 2px
+   } 
