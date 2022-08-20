@@ -1,0 +1,82 @@
+.filter{
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        width: 30%;
+    }
+    &__right {
+        width: 70%;
+    }
+    &__by {
+        @include font-config(24px, 700);
+        @include text-spacing();
+        color: #1b1b1b;
+        border-bottom: 1px solid #1b1b1b;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    &__selected-ttl {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        border-bottom: 1px solid;
+        span {
+            @include font-config(16px, 700);
+            @include text-spacing();
+            color: #1b1b1b;
+        }
+    }
+    &__selected__clear {
+        display: flex;
+        align-items: center;
+        background: unset;
+        border: unset;
+        cursor: pointer;
+        color: #868686;
+        span {
+            font-size: 14px;
+            color: #868686;
+        }
+    }
+    &__type__main {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: #1b1b1b;
+        margin: 24px 0 8px 0;
+    }
+    &__type__item {
+        input {
+            position: relative;
+            &::before {
+                content:"";
+                width: 16px;
+                height: 16px;
+                border: 3px solid #1b1b1b;
+                border-radius: 4px;
+                position: absolute;
+                top: 0;
+                background: #fff;
+            }
+            &:checked {
+                &::before {
+                }
+                &::after {
+                    content: "";
+                    background: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00065 5L4.00065 8L9.00065 1' stroke='%231B1B1B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    position: absolute;
+                    top: 3px;
+                    left: 5px;
+                    z-index: 1;
+                    width: 16px;
+                    height: 16px;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
