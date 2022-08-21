@@ -170,13 +170,17 @@
         }
     }
     &__result__sortby {
-        display: flex;
-        align-items: center;
+        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px;
         letter-spacing: 0.02em;
         color: #1b1b1b;
+        display: none;
+        @include sp {
+            display: flex;
+            align-items: center;
+        }
         svg {
             width: 16px;
         }
