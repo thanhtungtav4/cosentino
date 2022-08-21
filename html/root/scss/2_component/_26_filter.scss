@@ -4,10 +4,28 @@
         justify-content: space-between;
     }
     &__left {
-        width: 30%;
+        width: calc(30% - 8px);
+        @include sp {
+            position: fixed;
+            top: 125px;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            background: #fff;
+            width: 100%;
+            display: none;
+            padding: 20px;
+            overflow: scroll;
+            &.active {
+                display: block;
+            }
+        }
     }
     &__right {
-        width: 70%;
+        width: calc(70% - 8px);
+        @include sp {
+            width: 100%;
+        }
     }
     &__by {
         @include font-config(24px, 700);
@@ -16,6 +34,17 @@
         border-bottom: 1px solid #1b1b1b;
         text-transform: uppercase;
         margin-bottom: 16px;
+        @include sp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        svg {
+            display: none;
+            @include sp {
+                display: block;
+            }
+        }
     }
     &__selected-ttl {
         display: flex;
@@ -41,6 +70,15 @@
             color: #868686;
         }
     }
+    &__category {
+        border-bottom: 1px solid $border-color;
+    }
+    &__type__item__box {
+        &.active {
+            height: 128px;
+            overflow: hidden;
+        }
+    }
     &__type__main {
         font-size: 16px;
         font-weight: 700;
@@ -50,6 +88,7 @@
         margin: 24px 0 8px 0;
     }
     &__type__item {
+        margin: 8px 0;
         input {
             position: relative;
             &::before {
@@ -63,14 +102,12 @@
                 background: #fff;
             }
             &:checked {
-                &::before {
-                }
                 &::after {
                     content: "";
                     background: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00065 5L4.00065 8L9.00065 1' stroke='%231B1B1B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
                     position: absolute;
-                    top: 3px;
-                    left: 5px;
+                    top: 7px;
+                    left: 6px;
                     z-index: 1;
                     width: 16px;
                     height: 16px;
@@ -78,5 +115,74 @@
                 }
             }
         }
+        label {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+            margin-left: 8px;
+        }
     }
+    &__see-more {
+        cursor: pointer;
+        position: relative;
+        margin: 16px 0 8px 0;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            width: 100%;
+            height: 50px;
+            left: 0;
+            background-image: linear-gradient(rgba(255,255,255,0),#f3f3f3);
+        }
+    }
+    &__product {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+        &__item {
+            width: calc(100% / 3);
+            @include sp {
+                width: 100%;
+            }
+            .c-product {
+                margin: 8px;
+            }
+        }
+    }
+    &__result {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h4 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: 0.008em;
+            color: #1b1b1b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include sp {
+                font-size: 14px;
+            }
+        }
+    }
+    &__result__sortby {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: #1b1b1b;
+        svg {
+            width: 16px;
+        }
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
 }
