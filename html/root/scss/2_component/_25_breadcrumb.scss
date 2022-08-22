@@ -1,0 +1,22 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 0;
+    &__item {
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+            color: #868686;
+            text-decoration: none;
+        }
+        &.current {
+            a {
+                color: #000;
+                font-weight: 700;
+            }
+        }
+    }
+}
