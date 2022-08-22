@@ -1,0 +1,71 @@
+.intro {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        flex-wrap: wrap;
+    }
+    &__box {
+        width:calc(50% - 8px);
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        @include sp {
+            width: 100%;
+        }
+    }
+    &__video {
+        @include sp {
+            margin-bottom: 16px;
+        }
+      
+        overflow: hidden    ;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        // background: rgb(241, 235, 235);
+        padding: 16px;
+        h4 {
+            @include font-config(16px, 400);
+            @include text-spacing();
+            margin-bottom: 8px;
+        }
+        p {
+            @include font-config(14px, 400);
+            @include text-spacing();
+            overflow: hidden;
+            -webkit-line-clamp: 9;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+        }
+        a {
+            display: block;
+            @include font-config(14px, 600);
+            @include text-spacing();
+            color: #484848;
+            text-decoration: none;
+            margin-top: 4px;
+        }
+    }
+}
+.showroom {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        flex-wrap: wrap;
+    }
+    &__slide {
+        width: calc(50% - 8px);
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        overflow: hidden;
+        height: 300px;
+        @include sp {
+            width: 100%;
+            margin-top: 16px;
+        }
+    }
+    
+}

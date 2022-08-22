@@ -14,7 +14,9 @@
     "gulp-sass": "^5.1.0"
   },
   "dependencies": {
+    "graceful-fs": "^4.2.2",
     "gulp-pug": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.54.3"
   }
 }

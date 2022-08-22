@@ -22,108 +22,83 @@ block after_page
           arrows: false,
           lazyLoad: 'ondemand',
           });
-        $('.slick-sure').not('.slick-initialized').slick({
+      });
+      $(".showroom__slide").slick({
           infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false,
-          lazyLoad: 'ondemand',
-          responsive: [
-             {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ]
-        });
-        $('.m-product__slick').not('.slick-initialized').slick({
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          autoplay: true,
           dots: false,
           arrows: true,
-          lazyLoad: 'ondemand',
-        });
-        $('.m-product__prev').click(function(e){
-          $('.m-product__slick').slick('slickPrev');
-        } );
-
-        $('.m-product__next').click(function(e){
-          $('.m-product__slick').slick('slickNext');
-        } );
-        $('.m-product__slick02').not('.slick-initialized').slick({
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-          arrows: false,
-          lazyLoad: 'ondemand',
-        });
-        $('.m-item').not('.slick-initialized').slick({
-          infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          dots: false,
-          arrows: false,
-          lazyLoad: 'progressive',
-          responsive: [
-             {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            }
-          ]
-        });
-        $('.m-new__prev').click(function(e){
-          $('.m-new__slick').slick('slickPrev');
-        } );
-        $('.m-new__next').click(function(e){
-          $('.m-new__slick').slick('slickNext');
-        } );
-        $('.m-new__slick').not('.slick-initialized').slick({
-          infinite: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          dots: false,
-          arrows: false,
-          lazyLoad: 'progressive',
-          responsive: [
-             {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ]
-        });
+          autoplaySpeed: 4000
       });
+      
+      $('.c-product__slide').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1, 
+        arrows: true, 
+        dots: false,
+        initialSlide: 3,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+
+      //- tab
+      $(document).ready(function(){
+	
+        $('.tabs-product__nav li').click(function(){
+          var tab_id = $(this).attr('data-tab');
+
+          $('.tabs-product__nav li').removeClass('current');
+          $('.tab-content').removeClass('current');
+
+          $(this).addClass('current');
+          $("#"+tab_id).addClass('current');
+        })
+
+      })
+
+      //- slide tab1 
+      $('.c-product__slide--tab1').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1, 
+        arrows: true, 
+        dots: false,
+        initialSlide: 3,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+
+      //- slide tab2
+      $('.c-product__slide--tab2').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1, 
+        arrows: true, 
+        dots: false,
+        initialSlide: 3,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+     
 block container
   .c-carousel
     .c-carousel_inner
@@ -140,4 +115,255 @@ block container
             source(srcset=path+"assets/images/carousel.webp" type="image/webp")
             img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='carousel' loading="lazy" width="1512" height="600")
   .l-container
-   
+    section.i-intros
+      include ./_modules/heading-primary
+      .intro
+        .intro__video.intro__box
+          video(width='' height='' controls='')
+            source(src='movie.mp4' type='video/mp4')
+            source(src='movie.ogg' type='video/ogg')
+        .intro__content.intro__box
+          h4 Text Giới thiệu Heading 
+          p Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino
+          a(href="#") xem thêm  
+    //- showroom
+    section.showrooms
+      include ./_modules/heading-primary
+      .showroom
+        .intro__content.intro__box
+            h4 Text Giới thiệu Heading 
+            p Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino
+            a(href="#") xem thêm  
+        .showroom__slide
+          .showroom__slide__item
+            a(href)
+              .m-product__img
+                picture
+                  source(srcset=path+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9Uio-qP40FpWhlD40Xhl_mAZaleNiJ8qPg&usqp=CAU" type="image/avif")
+                  source(srcset=path+"assets/images/product_item.webp" type="image/webp")
+                  img.lazyload(src=path+"assets/images/product_item.jpg" data-src=path+"assets/images/product_item.jpg" alt='Logo' loading="lazy" width="" height="")
+          .showroom__slide__item
+            a(href)
+              .m-product__img
+                picture
+                  source(srcset=path+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9Uio-qP40FpWhlD40Xhl_mAZaleNiJ8qPg&usqp=CAU" type="image/avif")
+                  source(srcset=path+"assets/images/product_item.webp" type="image/webp")
+                  img.lazyload(src=path+"assets/images/product_item.jpg" data-src=path+"assets/images/product_item.jpg" alt='Logo' loading="lazy" width="" height="")
+
+    //- categories 
+    section.categories
+      include ./_modules/heading-primary
+      include ./_modules/categories
+    
+    //- cart product new
+    section.product 
+      include ./_modules/heading-primary
+      .c-product__slide
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+      
+    //- product tab
+    section.product__tab 
+      include ./_modules/heading-primary
+      .tabs-product
+        ul.tabs-product__nav
+          li.tab-link.current(data-tab="tab-1") Đá Granite Trắng
+          li.tab-link(data-tab="tab-2") Đá Granite tim 
+          li.tab-link(data-tab="tab-3") Đá Granite do
+          li.tab-link(data-tab="tab-4") Đá Granite xanh
+          li.tab-link(data-tab="tab-5") Đá Granite vang 
+          
+        .tabs-product__stage
+          #tab-1.tab-content.current
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+
+          #tab-2.tab-content
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+          #tab-3.tab-content
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+
+          #tab-4.tab-content
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+
+              
+          #tab-5.tab-content
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+
+    //- service
+    section.services 
+      include ./_modules/heading-primary
+      .service  
+        .service__wrapper
+          .service__list
+            .service__item
+              .service__box 
+                a.service__img(href="" title="service")
+                  img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+                a.service__text(href="" title="")
+                  h3 Phân phối đá vật tư 
+                a(href="" title="").service__see-more 
+                  span  see more
+            .service__item
+              .service__box 
+                a.service__img(href="" title="service")
+                  img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+                a.service__text(href="" title="")
+                  h3 Phân phối đá vật tư 
+                a(href="" title="").service__see-more 
+                  span  see more
+            .service__item
+              .service__box 
+                a.service__img(href="" title="service")
+                  img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+                a.service__text(href="" title="")
+                  h3 Phân phối đá vật tư 
+                a(href="" title="").service__see-more 
+                  span  see more
+            .service__item
+              .service__box 
+                a.service__img(href="" title="service")
+                  img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+                a.service__text(href="" title="")
+                  h3 Phân phối đá vật tư 
+                a(href="" title="").service__see-more 
+                  span  see more
+            .service__item
+              .service__box 
+                a.service__img(href="" title="service")
+                  img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+                a.service__text(href="" title="")
+                  h3 Phân phối đá vật tư 
+                a(href="" title="").service__see-more 
+                  span  see more
+           
+    //- xu hươngs
+    section.product 
+      .heading__primary
+        h2 Sản phẩm nổi bật
+      //- include ./_modules/heading-primary
+      .c-product__slide
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+        .c-product__slide__item
+          include ./_modules/cart_product
+      
+    //- giải pháp (tin tức)
+    section.news
+      include ./_modules/heading-primary
+      .new
+        .new__inner
+          .new__list 
+            .new__item
+                a.new__img(href="" title)
+                  img(src="https://sieuthida.vn/wp-content/uploads/2020/07/goc-nhin-tong-kho-da-hung-thinh.jpg", alt="") 
+                .new__content 
+                  h4
+                    a(href="") Quy Định Bảo Hành Vicostone Quy Định Bảo Hành Vicostone
+                  p Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành 
+            .new__item
+                a.new__img(href="" title)
+                  img(src="https://sieuthida.vn/wp-content/uploads/2020/07/goc-nhin-tong-kho-da-hung-thinh.jpg", alt="") 
+                .new__content 
+                  h4
+                    a(href="") Quy Định Bảo Hành Vicostone Quy Định Bảo Hành Vicostone
+                  p Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành 
+            .new__item
+                a.new__img(href="" title)
+                  img(src="https://sieuthida.vn/wp-content/uploads/2020/07/goc-nhin-tong-kho-da-hung-thinh.jpg", alt="") 
+                .new__content 
+                  h4
+                    a(href="") Quy Định Bảo Hành Vicostone Quy Định Bảo Hành Vicostone
+                  p Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành 
+            .new__item
+                a.new__img(href="" title)
+                  img(src="https://sieuthida.vn/wp-content/uploads/2020/07/goc-nhin-tong-kho-da-hung-thinh.jpg", alt="") 
+                .new__content 
+                  h4
+                    a(href="") Quy Định Bảo Hành Vicostone Quy Định Bảo Hành Vicostone
+                  p Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành Những nội dung sau đây được coi là thỏa thuận về điều kiện bảo hành 
+
+    //- footer v1
+    include _modules/footer-v1.pug

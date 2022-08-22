@@ -1,0 +1,174 @@
+extends _layout/default
+
+block vars
+  -title        = 'Top'
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'top'
+  -path         = ''
+block before_page
+    link(rel="preload" as="style" type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link( rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+block after_page
+    script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script.
+        $('.p-details__box__slide').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1, 
+            arrows: true, 
+            dots: false,
+            initialSlide: 3,
+            responsive: [
+            {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+            },
+            },
+        ],
+        });
+
+        $(".img_producto_container")
+        // tile mouse actions
+        .on("mouseover", function() {
+            $(this)
+            .children(".img_producto")
+            .css({ transform: "scale(" + $(this).attr("data-scale") + ")" });
+        })
+        .on("mouseout", function() {
+            $(this)
+            .children(".img_producto")
+            .css({ transform: "scale(1)" });
+        })
+        .on("mousemove", function(e) {
+            $(this)
+            .children(".img_producto")
+            .css({
+                "transform-origin":
+                ((e.pageX - $(this).offset().left) / $(this).width()) * 100 +
+                "% " +
+                ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +
+                "%"
+            });
+        });
+
+        //-
+        $(document).ready(function(){
+            $(".zoom-img__modal__btn").click(function(){
+                $(".zoom-img__modal__btn").toggleClass("active");
+                $(".zoom-img__modal__body").slideToggle();
+            });
+        }); 
+
+        $('.c-product__slide').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1, 
+            arrows: true, 
+            dots: false,
+            initialSlide: 3,
+            responsive: [
+            {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+            },
+            },
+        ],
+        });
+block container
+    .l-container
+        //- 
+        section 
+            .p-details
+                .p-details__inner
+                    .p-details__box
+                        .p-details__box__content
+                            .p-details__title
+                                h3 Amarcord
+                                span BQ9500
+                            .p-details__txt "Ấn tượng với dòng dung nham trên bề mặt núi lửa tự nhiên, đường vân Vicostone Amarcord như dòng chảy thành trầm tích tự do, mang đến vẻ đẹp vĩnh cửu, trường tồn cùng thời gian."
+                            .p-details__img
+                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                    .p-details__box    
+                        .p-details__box__slide
+                            .p-details__box__slide__item
+                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                            .p-details__box__slide__item
+                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                            .p-details__box__slide__item
+                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                            .p-details__box__slide__item
+                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+
+        //- zoom
+        section
+            .zoom-img__product 
+                .img_producto_container(data-scale="1.6")
+                    a.dslc-lightbox-image.img_producto(href="http://localhost:4000/assets/images/online_visualizer.jpg" target="_self" style="background-image:url('http://localhost:4000/assets/images/online_visualizer.jpg')") 
+            
+                .zoom-img__content
+                    .zoom-img__modal
+                        .zoom-img__modal__header 
+                            h4 Thông số kĩ thuật 
+                            .zoom-img__modal__btn
+                                .gg-chevron-up
+                                svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z' fill='currentColor')
+                        .zoom-img__modal__body 
+                            .zoom-img__modal__body__box 
+                                h3 KHỔ KÍCH THƯỚC TẤM ĐÁ 
+                                ul 
+                                    li Kích thước tiêu chuẩn(normal size): 303cm x 143cm (119 x 56)
+                                    li Kích thước khổ lớn(jumbo size): 330cm x 165cm (130 x 65)
+                                    li ĐỘ DÀY TIÊU CHUẨN(normal size): 20mm (3/4) 
+                                    li ĐỘ DÀY TIÊU CHUẨN(jumbo size): 30mm (11/6)
+                                    li CÁC LOẠI BỀ MẶT: Polished
+
+        //- 
+        section.product 
+            .heading__primary(style="justify-content: flex-start;")
+                h2 Sản phẩm khác
+            //- include ./_modules/heading-primary
+            .c-product__slide
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                            
+        //- bài viết liên quan
+        section
+            .related__posts__wrapper
+                .related__posts__content 
+                    h4  Hơn 130 lựa chọn màu sắc thoả mãn mọi nhu cầu của bạn
+                    p Với những dải màu sắc đa dạng phong phú, sản phẩm của VICOSTONE thích hợp với mọi ứng dụng nội thất
+                    a(href="#") Tìm hiểu thêm về cosentino®
+                .related__posts__list
+                    .related__posts__item 
+                        a(href="")
+                            img(src="https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp", alt="")  
+                            h3  GIẢ LẬP KHÔNG GIAN
+                            p Khám phá những ưu điểm nổi bật của sản phẩm đá thạch anh Vicostone để hiểu được lí do chúng tôi là sự lựa chọn tuyệt với nhất cho căn nhà của bạn
+                        a(href="") Tìm hiểu thêm 
+                    .related__posts__item 
+                        a(href="")
+                            img(src="https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp", alt="")  
+                            h3  GIẢ LẬP KHÔNG GIAN
+                            p Khám phá những ưu điểm nổi bật của sản phẩm đá thạch anh Vicostone để hiểu được lí do chúng tôi là sự lựa chọn tuyệt với nhất cho căn nhà của bạn
+                        a(href="") Tìm hiểu thêm 
+                    .related__posts__item 
+                        a(href="")
+                            img(src="https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp", alt="")  
+                            h3  GIẢ LẬP KHÔNG GIAN
+                            p Khám phá những ưu điểm nổi bật của sản phẩm đá thạch anh Vicostone để hiểu được lí do chúng tôi là sự lựa chọn tuyệt với nhất cho căn nhà của bạn
+                        a(href="") Tìm hiểu thêm 
