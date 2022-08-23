@@ -144,10 +144,20 @@
         &__item {
             width: calc(100% / 3);
             @include sp {
-                width: 100%;
+                width: 50%;
+                .c-product__img {
+                    height: 140px;
+                }
+                .c-product__body {
+                    padding: 8px;
+                }
             }
             .c-product {
                 margin: 8px;
+            }
+            h4 {
+                font-size: 12px;
+                text-transform: unset;
             }
         }
     }
