@@ -33,15 +33,15 @@
                 transform: scale(1.1);
             }
         }
-        &:after {
-            content: "";
-            background: rgba(16,16,16,.6);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
+        // &:after {
+        //     content: "";
+        //     background: rgba(16,16,16,.6);
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        // }
     }
     &__box {
         position: absolute;
