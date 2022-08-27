@@ -6,6 +6,8 @@ live project : https://cosentino-git-dev-thanhtungtav4.vercel.app/html/root/inde
 https://docs.google.com/spreadsheets/d/1__3HkjvpjvbskZJYZzbRrkE9iAKpHPg6moYxMypGKbs/edit
 # home page
 https://www.cosentino.com/
+#
+https://docs.google.com/spreadsheets/d/1__3HkjvpjvbskZJYZzbRrkE9iAKpHPg6moYxMypGKbs/edit?usp=sharing
 
 cosentino.icdvn.ml
 admin
