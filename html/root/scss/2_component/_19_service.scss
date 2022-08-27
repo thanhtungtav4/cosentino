@@ -37,6 +37,9 @@
         border: 1px solid $border-color;
         border-radius: 4px;
         position: relative;
+        @include sp {
+            height: 126px;
+        }
         img {
             width: 100%;
             height: 100%;
