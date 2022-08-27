@@ -1323,8 +1323,8 @@ body.js-active {
   border-radius: 4px;
 }
 .category__box img {
-  width: 50px;
-  height: 50px;
+  min-width: 30px;
+  min-height: 30px;
   border-radius: 999px;
   object-fit: cover;
   margin-right: 8px;
