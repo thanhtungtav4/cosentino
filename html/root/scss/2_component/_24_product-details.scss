@@ -185,3 +185,90 @@
     left: 4px;
     bottom: 2px
    } 
+
+//    
+.title__custome {
+    margin: 36px 0;
+    border-bottom: 2px solid;
+    span {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0.006em;
+        color: #1b1b1b;
+    }
+}
+.slider-thumb {
+    &__box {
+        margin: 0 8px;
+        position: relative;
+        height: 250px !important;
+        @include sp {
+            height: 165px !important;
+        }
+        &.slick-current {
+            background: cadetblue;
+            padding: 10px 0;
+            overflow: hidden;
+            transition: all .2s;
+        }
+    }
+    &__txt {
+        position: absolute;
+        bottom: 16px;
+        width: 100%;
+        text-align: center;
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+            color: #1b1b1b;
+        }
+    }
+}
+.slider-content {
+    margin-top: 30px;
+    &__box {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        @include sp {
+            display: block !important;
+        }
+        img {
+            width: 378px;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 1px solid $border-color;
+            @include sp {
+                width: 250px;
+                margin: 0 auto;
+            }
+        }
+        &__body {
+            @include sp {
+                text-align: center;
+                margin-top: 14px;
+            }
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0.03em;
+                color: #1b1b1b;
+                margin-bottom: 16px;
+            }
+            li {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: 0.02em;
+            }
+        }
+    }
+    .slick-next, .slick-prev {
+        display: none !important;
+    } 
+}
