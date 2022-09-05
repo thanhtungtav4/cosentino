@@ -78,6 +78,36 @@ block after_page
             },
         ],
         });
+
+        //- 
+        $('.slider-content').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: false,
+                infinite: false,
+                speed: 1000,
+            asNavFor: '.slider-thumb',
+                arrows: true,
+                //- prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',
+                //- nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',
+            });
+            $('.slider-thumb').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.slider-content',
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                    slidesToShow: 2,
+                    },
+                },
+            ],
+        });    
 block container
     .l-container
         //- 
@@ -90,19 +120,38 @@ block container
                                 h3 Amarcord
                                 span BQ9500
                             .p-details__txt "Ấn tượng với dòng dung nham trên bề mặt núi lửa tự nhiên, đường vân Vicostone Amarcord như dòng chảy thành trầm tích tự do, mang đến vẻ đẹp vĩnh cửu, trường tồn cùng thời gian."
-                            .p-details__img
-                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                        .p-details__img
+                            picture
+                                source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/avif')
+                                source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/webp')
+                                img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' alt='carousel' width='100%' height='100%')
+                            //- img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
                     .p-details__box    
                         .p-details__box__slide
                             .p-details__box__slide__item
-                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                                picture
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/avif')
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/webp')
+                                    img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' alt='carousel' width='100%' height='100%')
+                                //- img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
                             .p-details__box__slide__item
-                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                                picture
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/avif')
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/webp')
+                                    img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' alt='carousel' width='100%' height='100%')
+                                //- img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
                             .p-details__box__slide__item
-                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
+                                picture
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/avif')
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/webp')
+                                    img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' alt='carousel' width='100%' height='100%')
+                                //- img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
                             .p-details__box__slide__item
-                                img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
-
+                                picture
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/avif')
+                                    source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' type='image/webp')
+                                    img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/84/1647352405_10275-01-f1.jpg.webp' alt='carousel' width='100%' height='100%')
+                                //- img(src="http://localhost:4000/assets/images/online_visualizer.jpg", alt="")
         //- zoom
         section
             .zoom-img__product 
@@ -126,8 +175,102 @@ block container
                                     li ĐỘ DÀY TIÊU CHUẨN(normal size): 20mm (3/4) 
                                     li ĐỘ DÀY TIÊU CHUẨN(jumbo size): 30mm (11/6)
                                     li CÁC LOẠI BỀ MẶT: Polished
+        
+        //- details
+        section
+            .title__custome 
+                span Washbasins
+            .container__details__slide
+                .slider.slider-thumb
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Evita 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Marie 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Simmetry 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Equilibrium 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" type="image/avif")
+                            source(srcset=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" type="image/webp")
+                            img.lazyload(src=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" data-src=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Name 
+                .slider.slider-content
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Evita
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Marie
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Simmetry
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Equilibrium
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    div
+                        h3 5
+                   
 
-        //- 
+        //- sản phẩm liên quan 
         section.product 
             .heading__primary(style="justify-content: flex-start;")
                 h2 Sản phẩm khác

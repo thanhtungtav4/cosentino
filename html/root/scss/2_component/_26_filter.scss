@@ -143,6 +143,9 @@
         margin: 0 -8px;
         &__item {
             width: calc(100% / 3);
+            .c-product__desc {
+                span {display: none;}
+            }
             @include sp {
                 width: 50%;
                 .c-product__img {

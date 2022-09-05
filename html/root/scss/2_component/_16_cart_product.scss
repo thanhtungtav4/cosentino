@@ -21,6 +21,7 @@
     }
     &__body {
         padding: 16px;
+        text-align: center;
         a {
             text-decoration: none
         }
@@ -51,6 +52,8 @@
         li {
             display: flex;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             &:not(:last-child) {
                 margin-bottom: 4px;
             }
