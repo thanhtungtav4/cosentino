@@ -16,7 +16,7 @@
       <footer class="c-footer">
         <div class="footer__wrapper">
           <div class="l-container">
-            <div class="footer__logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="" width="50" height="50"></div>
+            <div class="footer__logo"><img class="lazyload" loading="lazy" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" srcset="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="" width="50" height="50"></div>
             <div class="footer__list">
               <div class="footer__item">
                 <div class="footer__item__ttl">Corporate</div>
