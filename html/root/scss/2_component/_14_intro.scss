@@ -51,25 +51,7 @@
         }
     }
 }
-.showroom {
-    display: flex;
-    justify-content: space-between;
-    @include sp {
-        flex-wrap: wrap;
-    }
-    &__slide {
-        width: calc(50% - 8px);
-        border: 1px solid $border-color;
-        border-radius: 4px;
-        overflow: hidden;
-        height: 300px;
-        @include sp {
-            width: 100%;
-            margin-top: 16px;
-        }
-    }
-    
-}
+
 .intro__content {
     &__btn {
         position: absolute;
@@ -99,5 +81,26 @@
         padding: 8px;
         border-radius: 4px;
         color: #fff !important;
+    }
+}
+
+// show room 
+.showroom {
+    &__item {
+        margin: 8px;
+    }
+    &__wrapper {
+        width: 900px;
+        margin: 0 auto;
+        @include sp {
+            width: 100%;
+        }
+    }
+    &__body {
+        text-align: center;
+        h3 {
+            padding: 16px 0;
+            text-transform: uppercase;
+        }
     }
 }

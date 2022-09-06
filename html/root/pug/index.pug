@@ -23,12 +23,21 @@ block after_page
           lazyLoad: 'ondemand',
           });
       });
-      $(".showroom__slide").slick({
+      $(".showroom__list").slick({
+          slidesToShow: 2 ,
           infinite: true,
           autoplay: true,
           dots: false,
           arrows: true,
-          autoplaySpeed: 4000
+          autoplaySpeed: 4000,
+          responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
       
       $('.c-product__slide').slick({
@@ -47,6 +56,7 @@ block after_page
           },
         ],
       });
+
 
       //- tab
       $(document).ready(function(){
@@ -117,7 +127,9 @@ block container
   .l-container
 
     section.i-intros
-      include ./_modules/heading-primary
+      //- include ./_modules/heading-primary
+      .heading__primary 
+          h2 GIỚI THIỆU
       .intro
         .intro__video.intro__box
           video(width='' height='' controls='')
@@ -141,37 +153,48 @@ block container
               span Liên hệ với cosentino
 
     //- showroom
-    //- section.showrooms
-    //-   include ./_modules/heading-primary
-    //-   .showroom
-    //-     .intro__content.intro__box
-    //-         h4 Text Giới thiệu Heading 
-    //-         p Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino
-    //-         a(href="#") xem thêm  
-    //-     .showroom__slide
-    //-       .showroom__slide__item
-    //-         a(href)
-    //-           .m-product__img
-    //-             picture
-    //-               source(srcset=path+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9Uio-qP40FpWhlD40Xhl_mAZaleNiJ8qPg&usqp=CAU" type="image/avif")
-    //-               source(srcset=path+"assets/images/product_item.webp" type="image/webp")
-    //-               img.lazyload(src=path+"assets/images/product_item.jpg" data-src=path+"assets/images/product_item.jpg" alt='Logo' loading="lazy" width="" height="")
-    //-       .showroom__slide__item
-    //-         a(href)
-    //-           .m-product__img
-    //-             picture
-    //-               source(srcset=path+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj9Uio-qP40FpWhlD40Xhl_mAZaleNiJ8qPg&usqp=CAU" type="image/avif")
-    //-               source(srcset=path+"assets/images/product_item.webp" type="image/webp")
-    //-               img.lazyload(src=path+"assets/images/product_item.jpg" data-src=path+"assets/images/product_item.jpg" alt='Logo' loading="lazy" width="" height="")
-    
+    section
+      .showroom
+        .heading__primary 
+          h2 SHOWROOM
+        .showroom__wrapper
+          .showroom__list
+            .showroom__item
+              picture
+                source(srcset='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' type='image/avif')
+                source(srcset='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' type='image/webp')
+                img(src='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' data-src='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' alt='carousel' width='100%' height='100%')
+              .showroom__body
+                h3 KHO PHAN TRỌNG TUỆ
+                p Đ/c: Km số 2 Phan Trọng Tuệ, Thanh Trì, Hà Nội. Diện tích > 6.000m2. Hơn nghìn mẫu đá Granite, Marble, Thạch Anh, Nhân tạo hot nhất hiện nay, liên tục cập nhật các mẫu mới
+            .showroom__item
+              picture
+                source(srcset='https://sieuthida.vn/wp-content/uploads/2020/05/kho-d%C3%A1-ninh-b%C3%ACnh.jpg' type='image/avif')
+                source(srcset='https://sieuthida.vn/wp-content/uploads/2020/05/kho-d%C3%A1-ninh-b%C3%ACnh.jpg' type='image/webp')
+                img(src='https://sieuthida.vn/wp-content/uploads/2020/05/kho-d%C3%A1-ninh-b%C3%ACnh.jpg' data-src='https://sieuthida.vn/wp-content/uploads/2020/05/kho-d%C3%A1-ninh-b%C3%ACnh.jpg' alt='carousel' width='100%' height='100%')
+              .showroom__body
+                h3 KHO NINH BÌNH
+                p Đ/c: Cảng Phúc Lộc, Ninh Phúc, Ninh Bình (nằm ngay sát bờ sông Đáy). Diện tích > 11000m2.  100% đá nội địa đủ chủng loại, kích thước, chuyên giao hàng container, phục vụ 24/7
+            .showroom__item
+              picture
+                source(srcset='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' type='image/avif')
+                source(srcset='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' type='image/webp')
+                img(src='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' data-src='https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg' alt='carousel' width='100%' height='100%')
+              .showroom__body
+                h3 KHO PHAN TRỌNG TUỆ
+                p Đ/c: Km số 2 Phan Trọng Tuệ, Thanh Trì, Hà Nội. Diện tích > 6.000m2. Hơn nghìn mẫu đá Granite, Marble, Thạch Anh, Nhân tạo hot nhất hiện nay, liên tục cập nhật các mẫu mới
+            
     //- categories 
-    section.categories
-      include ./_modules/heading-primary
-      include ./_modules/categories
+    section
+      .m-category
+        .heading__primary 
+            h2 HẠNG MỤC ĐÁ ỐP LÁT
+        include ./_modules/categories
     
     //- cart product new
     section.product 
-      include ./_modules/heading-primary
+      .heading__primary 
+            h2 DÒNG ĐÁ MỚI 
       .c-product__slide
         .c-product__slide__item
           include ./_modules/cart_product
