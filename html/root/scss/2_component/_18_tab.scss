@@ -4,17 +4,18 @@
         display: block;
     }
 }
+
 .tabs-product {
-    &__nav {
+    &__nav,
+    .tabs-product__nav-2 {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         gap: 16px;
-        margin-bottom: 16px;
+        // margin-bottom: 16px;
         .tab-link {
             padding: 8px 8px 4px 8px;
-            border-bottom: 1px solid $border-color;
             @include font-config(14px, 600);
             @include text-spacing();
             color: #101010;
@@ -26,9 +27,10 @@
                 border-radius: 4px;
                 transition: all .3s;
             }
-            &.current{
-                background-color: #000;
-                color: #fff;
+            &.current {
+                border-bottom: 1px solid $border-color;
+                // background-color: #000;
+                // color: #fff;
                 border-radius: 4px;
             }
         }
@@ -41,7 +43,6 @@
         margin-left: -8px;
         margin-right: -8px;
         flex-wrap: wrap;
-
         @include sp {
             display: flex;
             overflow-x: scroll;
@@ -58,7 +59,7 @@
             min-width: 100%;
         }
     }
-    .arrow__long  {
+    .arrow__long {
         display: flex;
         align-items: center;
         display: none;

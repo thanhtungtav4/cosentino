@@ -58,7 +58,7 @@ block after_page
       });
 
 
-      //- tab
+      //- tab silestone
       $(document).ready(function(){
 	
         $('.tabs-product__nav li').click(function(){
@@ -70,7 +70,20 @@ block after_page
           $(this).addClass('current');
           $("#"+tab_id).addClass('current');
         })
+      })
+      
+      //- tab dekton
+      $(document).ready(function(){
+	
+        $('.tabs-product__nav-2 li').click(function(){
+          var tabs_id = $(this).attr('data-tab');
 
+          $('.tabs-product__nav-2 li').removeClass('current');
+          $('.tab-content2').removeClass('current');
+
+          $(this).addClass('current');
+          $("#"+tabs_id).addClass('current');
+        })
       })
 
       //- slide tab1 
@@ -209,16 +222,23 @@ block container
         .c-product__slide__item
           include ./_modules/cart_product
       
-    //- product tab
+    //- product tab silestone
     section.product__tab 
-      include ./_modules/heading-primary
+      //- .heading__primary
+      //-   h2 Danh mục đá
       .tabs-product
-        ul.tabs-product__nav
-          li.tab-link.current(data-tab="tab-1") Đá Granite Trắng
-          li.tab-link(data-tab="tab-2") Đá Granite tim 
-          li.tab-link(data-tab="tab-3") Đá Granite do
-          li.tab-link(data-tab="tab-4") Đá Granite xanh
-          li.tab-link(data-tab="tab-5") Đá Granite vang 
+        .cate-home
+          .cate-home-box
+            h3 Đá silestone
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5858 6.34317L12 4.92896L19.0711 12L12 19.0711L10.5858 17.6569L16.2427 12L10.5858 6.34317Z" fill="currentColor" />
+            </svg>
+          ul.tabs-product__nav
+            li.tab-link.current(data-tab="tab-1") Đá Granite Trắng
+            li.tab-link(data-tab="tab-2") Đá Granite tim 
+            li.tab-link(data-tab="tab-3") Đá Granite do
+            li.tab-link(data-tab="tab-4") Đá Granite xanh
+            li.tab-link(data-tab="tab-5") Đá Granite vang 
           
         .tabs-product__stage
           #tab-1.tab-content.current
@@ -249,10 +269,7 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-              .tabs-product__item
-                include ./_modules/cart_product
-              .tabs-product__item
-                include ./_modules/cart_product
+              
             .arrow__long 
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
@@ -301,6 +318,106 @@ block container
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
+    //- 
+    //- product tab dekton
+    section.product__tab 
+      //- .heading__primary
+      //-   h2 Danh mục đá
+      .tabs-product
+        .cate-home
+          .cate-home-box
+            h3 Đá dekton
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5858 6.34317L12 4.92896L19.0711 12L12 19.0711L10.5858 17.6569L16.2427 12L10.5858 6.34317Z" fill="currentColor" />
+            </svg>
+          ul.tabs-product__nav-2
+            li.tab-link.current(data-tab="tabs-1") Đá Granite Trắng
+            li.tab-link(data-tab="tabs-2") Đá Granite tim 
+            li.tab-link(data-tab="tabs-3") Đá Granite do
+            li.tab-link(data-tab="tabs-4") Đá Granite xanh
+            li.tab-link(data-tab="tabs-5") Đá Granite vang 
+          
+        .tabs-product__stage
+          #tabs-1.tab-content2.current
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+
+          #tabs-2.tab-content2
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+          #tabs-3.tab-content2
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+
+          #tabs-4.tab-content2
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+
+              
+          #tabs-5.tab-content2
+            .tabs-product__list
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+              .tabs-product__item
+                include ./_modules/cart_product
+            .arrow__long 
+              span Kéo sang
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
+  
+
+
+    
     //- service
     section.services 
       include ./_modules/heading-primary
