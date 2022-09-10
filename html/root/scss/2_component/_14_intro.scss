@@ -54,17 +54,24 @@
 
 .intro__content {
     &__btn {
-        position: absolute;
-        right: 16px;
-        left: 16px;
-        bottom: 16px;
+        // position: absolute;
+        // right: 16px;
+        // left: 16px;
+        // bottom: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
+        @include sp {
+            flex-wrap: wrap;
+        }
         a {
             display: flex;
             align-items: center;
+            @include sp {
+                width: 100%;
+                justify-content: center;
+            }
             span {
                 margin-left: 8px;
             }
@@ -101,6 +108,49 @@
         h3 {
             padding: 16px 0;
             text-transform: uppercase;
+        }
+    }
+}
+
+// 
+.tab-latest-content {
+    display: none;
+    &.current {
+        display: block;
+    }
+}
+.tabs-latest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    li {
+        list-style: none;
+        padding: 8px;
+        // border: 1px solid $border-color;
+        border-radius: 999px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #101010;
+        text-transform: uppercase;
+        font-size: 14px;
+        cursor: pointer;
+        &.current {
+            border: 3px solid #000;
+          
+        }
+    }
+}
+.releases {
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 26px;
+        img {
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

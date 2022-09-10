@@ -121,6 +121,20 @@ block after_page
         },
       ],
       });
+
+      //- tab Latest releases
+      $(document).ready(function(){
+	
+        $('.tabs-latest li').click(function(){
+          var tabx_id = $(this).attr('data-tab');
+
+          $('.tabs-latest li').removeClass('current');
+          $('.tab-latest-content').removeClass('current');
+
+          $(this).addClass('current');
+          $("#"+tabx_id).addClass('current');
+        })
+      })
      
 block container
   .c-carousel
@@ -204,9 +218,63 @@ block container
             h2 HẠNG MỤC ĐÁ ỐP LÁT
         include ./_modules/categories
     
+    section
+      .heading__primary 
+        h2 Latest releases
+      .tabs-latest
+        li.tab-latest.current(data-tab="tabx-1") SUNLIT DAYS
+        li.tab-latest(data-tab="tabx-2") ETHEREAL
+        li.tab-latest(data-tab="tabx-3") LOFT
+      .tabs-latest__inner 
+        #tabx-1.tab-latest-content.current
+          .releases__box
+            .releases__box__left
+              a(href="")  
+                picture
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-A-1.jpg' type='image/avif')
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-A-1.jpg' type='image/webp')
+                  img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-A-1.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-A-1.jpg' alt='carousel' width='100%' height='100%')
+            .releases__box__right
+              a(href="")
+                picture
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-b.jpg' type='image/avif')
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-b.jpg' type='image/webp')
+                  img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-b.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-b.jpg' alt='carousel' width='100%' height='100%')
+
+    
+        #tabx-2.tab-latest-content
+          .releases__box
+            .releases__box__left
+              a(href="")  
+                picture
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-a.jpg' type='image/avif')
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-a.jpg' type='image/webp')
+                  img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-a.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-a.jpg' alt='carousel' width='100%' height='100%')
+            .releases__box__right
+              a(href="")
+                picture
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-b.jpg' type='image/avif')
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-b.jpg' type='image/webp')
+                  img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-b.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-b.jpg' alt='carousel' width='100%' height='100%')
+
+        #tabx-3.tab-latest-content
+          .releases__box
+            .releases__box__left
+              a(href="")  
+                picture
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-a.jpg' type='image/avif')
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-a.jpg' type='image/webp')
+                  img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-a.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-a.jpg' alt='carousel' width='100%' height='100%')
+            .releases__box__right
+              a(href="")
+                picture
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-b.jpg' type='image/avif')
+                  source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-b.jpg' type='image/webp')
+                  img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-b.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-b.jpg' alt='carousel' width='100%' height='100%')
+
     //- cart product new
     section.product 
-      .heading__primary 
+      .heading__primary(style="justify-content: flex-start;") 
             h2 DÒNG ĐÁ MỚI 
       .c-product__slide
         .c-product__slide__item
