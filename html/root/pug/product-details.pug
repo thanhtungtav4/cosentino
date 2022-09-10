@@ -156,8 +156,7 @@ block container
         section
             .zoom-img__product 
                 .img_producto_container(data-scale="1.6")
-                    a.dslc-lightbox-image.img_producto(href="http://localhost:4000/assets/images/online_visualizer.jpg" target="_self" style="background-image:url('http://localhost:4000/assets/images/online_visualizer.jpg')") 
-            
+                    a.dslc-lightbox-image.img_producto(href="https://www.cosentino.com/wp-content/uploads/2022/08/home_banos_card.jpg" target="_self" style="background-image:url('https://www.cosentino.com/wp-content/uploads/2022/08/home_banos_card.jpg')")             
                 .zoom-img__content
                     .zoom-img__modal
                         .zoom-img__modal__header 
@@ -176,7 +175,27 @@ block container
                                     li ĐỘ DÀY TIÊU CHUẨN(jumbo size): 30mm (11/6)
                                     li CÁC LOẠI BỀ MẶT: Polished
         
-        //- details
+        //- sản phẩm liên quan 
+        section.product 
+            .heading__primary(style="justify-content: flex-start;")
+                h2 Sản phẩm tương tự
+            //- include ./_modules/heading-primary
+            .c-product__slide
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                          
+
+        //- Washbasins
         section
             .title__custome 
                 span Washbasins
@@ -269,26 +288,193 @@ block container
                     div
                         h3 5
                    
+        //- Shower trays
+        section
+            .title__custome 
+                span Shower trays
+            .container__details__slide
+                .slider.slider-thumb
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Evita 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Marie 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Simmetry 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Equilibrium 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" type="image/avif")
+                            source(srcset=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" type="image/webp")
+                            img.lazyload(src=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" data-src=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Name 
+                .slider.slider-content
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Evita
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Marie
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Simmetry
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Equilibrium
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    div
+                        h3 5
+          
+        //- Edge types
+        section
+            .title__custome 
+                span Edge types
+            .container__details__slide
+                .slider.slider-thumb
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Evita 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Marie 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Simmetry 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Equilibrium 
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" type="image/avif")
+                            source(srcset=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" type="image/webp")
+                            img.lazyload(src=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" data-src=path+"https://www.cosentino.com/wp-content/uploads/2022/08/home_cocinas_card.jpg" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Name 
+                .slider.slider-content
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Evita
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Marie
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Simmetry
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Equilibrium
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    div
+                        h3 5
+          
 
-        //- sản phẩm liên quan 
-        section.product 
-            .heading__primary(style="justify-content: flex-start;")
-                h2 Sản phẩm khác
-            //- include ./_modules/heading-primary
-            .c-product__slide
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                            
         //- bài viết liên quan
         section
             .related__posts__wrapper
