@@ -108,10 +108,11 @@
         bottom: 32%;
         left: -116px;
         background: #fff;
-        // border-radius: 4px;
         text-align: right;
         padding: 16px;
-        // width: 500px;
+        &.active {
+            display: none;
+        }
         @include sp {
             width: 100%;
             left: 0;
@@ -154,7 +155,7 @@
     &__modal__body__box {
         margin-top: 16px;
         h3 {
-            font-size: 14px;
+            font-size: 10px;
             line-height: 150%;
             letter-spacing: 0.01em;
             color: #101010;
@@ -162,7 +163,7 @@
         }
         ul {
             li {
-                font-size: 14px;
+                font-size: 10px;
                 font-weight: 700;
                 line-height: 150%;
                 letter-spacing: 0.01em;
@@ -282,4 +283,48 @@
     .slick-next, .slick-prev {
         display: none !important;
     } 
+}
+
+.name__details {
+    text-align: center;
+    padding: 40px 0;
+    h3 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #101010;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #505050;
+        margin-top: 8px;
+    }
+}
+
+.edge {
+    &__desc {
+        text-align: center;
+        margin: 24px 0;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0 -8px;
+        flex-wrap: wrap;
+    }
+    &__item {
+        padding: 24px 8px;
+        width: calc(100% / 4);
+        @include sp {
+            width: 50%;
+        }
+        h3 {
+            text-align: center;
+            margin-top: 24px;
+        }
+    }
 }
