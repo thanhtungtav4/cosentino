@@ -122,6 +122,41 @@ block after_page
       ],
       });
 
+      //- slide đá
+      $('.tabs-product__list-slide1').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1, 
+        arrows: true, 
+        dots: false,
+        initialSlide: 3,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+      //- da dekton 
+      $('.slide-dekton').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1, 
+        arrows: true, 
+        dots: false,
+        initialSlide: 2,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+       
       //- tab Latest releases
       $(document).ready(function(){
 	
@@ -310,7 +345,7 @@ block container
           
         .tabs-product__stage
           #tab-1.tab-content.current
-            .tabs-product__list
+            .tabs-product__list.tabs-product__list-slide1
               .tabs-product__item
                 include ./_modules/cart_product
               .tabs-product__item
@@ -339,10 +374,10 @@ block container
                 include ./_modules/cart_product
               
             .arrow__long 
-              span Kéo sang
+              span Xem thêm
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
           #tab-3.tab-content
-            .tabs-product__list
+            .tabs-product__list.tabs-product__list-slide3
               .tabs-product__item
                 include ./_modules/cart_product
               .tabs-product__item
@@ -360,7 +395,7 @@ block container
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
           #tab-4.tab-content
-            .tabs-product__list
+            .tabs-product__list.tabs-product__list-slide4
               .tabs-product__item
                 include ./_modules/cart_product
               .tabs-product__item
@@ -371,7 +406,7 @@ block container
 
               
           #tab-5.tab-content
-            .tabs-product__list
+            .tabs-product__list.tabs-product__list-slide5
               .tabs-product__item
                 include ./_modules/cart_product
               .tabs-product__item
@@ -389,8 +424,6 @@ block container
     //- 
     //- product tab dekton
     section.product__tab 
-      //- .heading__primary
-      //-   h2 Danh mục đá
       .tabs-product
         .cate-home
           .cate-home-box
@@ -407,7 +440,7 @@ block container
           
         .tabs-product__stage
           #tabs-1.tab-content2.current
-            .tabs-product__list
+            .tabs-product__list.slide-dekton
               .tabs-product__item
                 include ./_modules/cart_product
               .tabs-product__item

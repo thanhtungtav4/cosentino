@@ -43,22 +43,22 @@
         margin-left: -8px;
         margin-right: -8px;
         flex-wrap: wrap;
-        @include sp {
-            display: flex;
-            &::-webkit-scrollbar {
-                display: none;
-            }
-        }
+        // @include sp {
+        //     display: flex;
+        //     &::-webkit-scrollbar {
+        //         display: none;
+        //     }
+        // }
     }
     &__item {
         width: calc(100% / 4);
         // margin: 8px;
-        @include sp {
-            min-width: 50%;
-            .c-product__img {
-                height: 150px;
-            }
-        }
+        // @include sp {
+        //     min-width: 50%;
+        //     .c-product__img {
+        //         height: 150px;
+        //     }
+        // }
         
     }
     .arrow__long {
