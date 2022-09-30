@@ -131,6 +131,13 @@ if (function_exists('acf_add_local_field_group')):
                     'value' => 'page',
                 ) ,
             ) ,
+            array(
+                array(
+                    'param' => 'taxonomy',
+                    'operator' => '==',
+                    'value' => 'category',
+                ) ,
+            ) ,
         ) ,
         'menu_order' => 0,
         'position' => 'normal',
