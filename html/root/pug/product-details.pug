@@ -55,12 +55,25 @@ block after_page
         });
 
         //-
-        $(document).ready(function(){
-            $(".zoom-img__modal__btn").click(function(){
-                $(".zoom-img__modal__btn").toggleClass("active");
-                $(".zoom-img__modal__body").slideToggle();
+        //- $(document).ready(function() {
+        //-     $(".zoom-img__modal__btn").click(function () {
+        //-         //- $(".tab").removeClass("active");
+        //-         $(".zoom-img__content").addClass("active");        
+        //-     });
+        //- });
+        
+        var abc = $('.zoom-img__content ');
+
+        $(document).on('click', '.zoom-img__modal__btn ',
+            function(e) {
+                abc.addClass('active');
+                //- $('body').addClass('no-scroll');    
             });
-        }); 
+        $(document).on('click', '.img_producto_container',
+            function(e) {
+                abc.removeClass('active');
+                //- $('body').removeClass('no-scroll');
+            });
 
         $('.c-product__slide').slick({
             infinite: true,
@@ -110,6 +123,10 @@ block after_page
         });    
 block container
     .l-container
+        section
+            .name__details
+                h1 Từ Bộ sưu tập Natural
+                p Bộ sưu tập Natural mang sắc thái mạnh mẽ của đá granite cùng sự thanh thoát của đá cẩm thạch, tạo dựng không gian nội thất thân thiện với thiên nhiên
         //- 
         section 
             .p-details
@@ -117,7 +134,7 @@ block container
                     .p-details__box
                         .p-details__box__content
                             .p-details__title
-                                h3 Amarcord
+                                h2 Amarcord
                                 span BQ9500
                             .p-details__txt "Ấn tượng với dòng dung nham trên bề mặt núi lửa tự nhiên, đường vân Vicostone Amarcord như dòng chảy thành trầm tích tự do, mang đến vẻ đẹp vĩnh cửu, trường tồn cùng thời gian."
                         .p-details__img
@@ -156,19 +173,18 @@ block container
         section
             .zoom-img__product 
                 .img_producto_container(data-scale="1.6")
-                    a.dslc-lightbox-image.img_producto(href="http://localhost:4000/assets/images/online_visualizer.jpg" target="_self" style="background-image:url('http://localhost:4000/assets/images/online_visualizer.jpg')") 
-            
+                    .dslc-lightbox-image.img_producto(href="https://www.cosentino.com/wp-content/uploads/2022/08/home_banos_card.jpg" target="_self" style="background-image:url('https://www.cosentino.com/wp-content/uploads/2022/08/home_banos_card.jpg')")             
                 .zoom-img__content
                     .zoom-img__modal
                         .zoom-img__modal__header 
-                            h4 Thông số kĩ thuật 
+                            p Thông số kĩ thuật 
                             .zoom-img__modal__btn
                                 .gg-chevron-up
                                 svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
                                     path(d='M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z' fill='currentColor')
                         .zoom-img__modal__body 
                             .zoom-img__modal__body__box 
-                                h3 KHỔ KÍCH THƯỚC TẤM ĐÁ 
+                                p KHỔ KÍCH THƯỚC TẤM ĐÁ 
                                 ul 
                                     li Kích thước tiêu chuẩn(normal size): 303cm x 143cm (119 x 56)
                                     li Kích thước khổ lớn(jumbo size): 330cm x 165cm (130 x 65)
@@ -176,10 +192,30 @@ block container
                                     li ĐỘ DÀY TIÊU CHUẨN(jumbo size): 30mm (11/6)
                                     li CÁC LOẠI BỀ MẶT: Polished
         
-        //- details
+        //- sản phẩm liên quan 
+        section.product 
+            .heading__primary(style="justify-content: flex-start;")
+                h2 Sản phẩm tương tự
+            //- include ./_modules/heading-primary
+            .c-product__slide
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                .c-product__slide__item
+                    include ./_modules/cart_product
+                          
+
+        //- Washbasins
         section
             .title__custome 
-                span Washbasins
+                h2 Washbasins
             .container__details__slide
                 .slider.slider-thumb
                     .slider-thumb__box
@@ -269,31 +305,176 @@ block container
                     div
                         h3 5
                    
-
-        //- sản phẩm liên quan 
-        section.product 
-            .heading__primary(style="justify-content: flex-start;")
-                h2 Sản phẩm khác
-            //- include ./_modules/heading-primary
-            .c-product__slide
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                .c-product__slide__item
-                    include ./_modules/cart_product
-                            
+        //- Shower trays
+        section
+            .title__custome 
+                h2 Shower trays
+            .container__details__slide
+                .slider.slider-thumb
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka-brim/wakka-brim.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka-brim/wakka-brim.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka-brim/wakka-brim.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka-brim/wakka-brim.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Wakka brim
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/bubbles/bubbles.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/bubbles/bubbles.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/bubbles/bubbles.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/bubbles/bubbles.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Bubbles
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/exelis/exelis.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/exelis/exelis.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/exelis/exelis.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/exelis/exelis.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Exelis
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/freccia/freccia.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/freccia/freccia.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/freccia/freccia.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/freccia/freccia.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Freccia
+                    .slider-thumb__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/kador-suite/kador-suite.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/kador-suite/kador-suite.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/kador-suite/kador-suite.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/kador-suite/kador-suite.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-thumb__txt
+                            h3 Kador suite
+                .slider.slider-content
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka/wakka.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka/wakka.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka/wakka.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/wakka/wakka.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Wakka
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/evita/evita.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Marie
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/simmetry/simmetry.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Simmetry
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    .slider-content__box
+                        picture
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/avif")
+                            source(srcset=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" type="image/webp")
+                            img.lazyload(src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" data-src=path+"https://assetstools.cosentino.com/api/v1/bynder/product/CBS/equilibrium/equilibrium.png?trim=color&w=266&h=180&auto=compress" alt='Logo' loading="lazy" width="" height="")
+                        .slider-content__box__body 
+                            h3 Equilibrium
+                            ul 
+                                li Evita S: 50 x 30 cm 
+                                li Evita L: 65 x 30 cm 
+                                li Evita Q: 51 x 41 cm 
+                                li Thickness: 10,5 cm 
+                    div
+                        h3 5
+          
+        //- Edge types
+        section
+            .title__custome 
+                h2 Edge types
+            .edge__desc The design possibilities of Silestone are endless, know the options in edges for your kitchen or bathroom countertop.
+            .edge__list 
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Basic / Eased
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/demi-bullnose.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/demi-bullnose.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/demi-bullnose.svg' data-src='https://tools.cosentino.com/media/silestone/edges/demi-bullnose.svg' alt='carousel' width='100%' height='100%')
+                    h3 Demi Bullnose
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/waterfall.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/waterfall.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/waterfall.svg' data-src='https://tools.cosentino.com/media/silestone/edges/waterfall.svg' alt='carousel' width='100%' height='100%')
+                    h3 Waterfall / Double Radius
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/step-half_bullnose.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/step-half_bullnose.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/step-half_bullnose.svg' data-src='https://tools.cosentino.com/media/silestone/edges/step-half_bullnose.svg' alt='carousel' width='100%' height='100%')
+                    h3 Step-Half Bullnose / Dupont
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Bevel
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Bullnose
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Ogee
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Ogee
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Top Roundover
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Hollywood / Wedge Bevel
+                .edge__item
+                    picture
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/avif')
+                        source(srcset='https://tools.cosentino.com/media/silestone/edges/basic.svg' type='image/webp')
+                        img(src='https://tools.cosentino.com/media/silestone/edges/basic.svg' data-src='https://tools.cosentino.com/media/silestone/edges/basic.svg' alt='carousel' width='100%' height='100%')
+                    h3 Ogee Special
         //- bài viết liên quan
         section
             .related__posts__wrapper
                 .related__posts__content 
-                    h4  Hơn 130 lựa chọn màu sắc thoả mãn mọi nhu cầu của bạn
+                    p.related__posts__content--ttl  Hơn 130 lựa chọn màu sắc thoả mãn mọi nhu cầu của bạn
                     p Với những dải màu sắc đa dạng phong phú, sản phẩm của VICOSTONE thích hợp với mọi ứng dụng nội thất
                     a(href="#") Tìm hiểu thêm về cosentino®
                 .related__posts__list
@@ -304,7 +485,7 @@ block container
                                 source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' type='image/webp')
                                 img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' alt='carousel' width='' height='')
                             
-                            h3  GIẢ LẬP KHÔNG GIAN
+                            p.custome-ttl  GIẢ LẬP KHÔNG GIAN
                             p Khám phá những ưu điểm nổi bật của sản phẩm đá thạch anh Vicostone để hiểu được lí do chúng tôi là sự lựa chọn tuyệt với nhất cho căn nhà của bạn
                         a.see-more(href="") Tìm hiểu thêm 
                     .related__posts__item 
@@ -315,7 +496,7 @@ block container
                                 img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' alt='carousel' width='' height='')
                             
                      
-                            h3  GIẢ LẬP KHÔNG GIAN
+                            p.custome-ttl  GIẢ LẬP KHÔNG GIAN
                             p Khám phá những ưu điểm nổi bật của sản phẩm đá thạch anh Vicostone để hiểu được lí do chúng tôi là sự lựa chọn tuyệt với nhất cho căn nhà của bạn
                         a.see-more(href="") Tìm hiểu thêm 
                     .related__posts__item 
@@ -325,6 +506,7 @@ block container
                                 source(srcset='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' type='image/webp')
                                 img(src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' data-src='https://chus.dosi-in.com/images/thumbnails/500/500/detailed/53/1647352329_10204-01-f2.jpg.webp' alt='carousel' width='' height='')
                             
-                            h3  GIẢ LẬP KHÔNG GIAN
+                            p.custome-ttl  GIẢ LẬP KHÔNG GIAN
                             p Khám phá những ưu điểm nổi bật của sản phẩm đá thạch anh Vicostone để hiểu được lí do chúng tôi là sự lựa chọn tuyệt với nhất cho căn nhà của bạn
                         a.see-more(href="") Tìm hiểu thêm 
+

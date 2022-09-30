@@ -1,4 +1,4 @@
-.c-carousel{
+.c-carousel {
     width: 100%;
     text-align: center;
     position: relative;
@@ -11,36 +11,44 @@
         left: 0;
         right: 0;
         list-style-type: none;
-        @include sp{
+        @include sp {
             bottom: 0;
         }
-
-            li {
-                margin: 0 0.25rem;
-            }
-            button {
-                display: block;
+        li {
+            margin: 0 0.25rem;
+        }
+        button {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            @include sp {
                 width: 1rem;
                 height: 1rem;
-                @include sp{
-                    width: 1rem;
-                    height: 1rem;
-                }
-                padding: 0;
-                border: none;
-                border-radius: 100%;
-                background-color: white;
-                text-indent: -9999px;
             }
-            li.slick-active button {
-                background-color: #EB6A6A;
-            }
-        
+            padding: 0;
+            border: none;
+            border-radius: 100%;
+            background-color: white;
+            text-indent: -9999px;
+        }
+        li.slick-active button {
+            background-color: #EB6A6A;
+        }
     }
-    &_item{
+    &_item {
         position: relative;
+        @include sp {
+            picture {
+                height: 300px;
+                display: block;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
-    .m-btn{
+    .m-btn {
         position: absolute;
         top: 75%;
         left: 50%;
@@ -53,7 +61,7 @@
         font-size: 1.7rem;
         font-weight: 600;
         width: 150px;
-        &:hover{
+        &:hover {
             background: #232323;
             color: #ffffff;
         }
