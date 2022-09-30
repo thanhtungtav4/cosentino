@@ -1,22 +1,8 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the opening of the #site-footer div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
-
-?>
 </main>
       <footer class="c-footer">
         <div class="footer__wrapper">
           <div class="l-container">
-            <div class="footer__logo"><img class="lazyload" loading="lazy" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" srcset="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="" width="50" height="50"></div>
+            <div class="footer__logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="" width="50" height="50"></div>
             <div class="footer__list">
               <div class="footer__item">
                 <div class="footer__item__ttl">Corporate</div>
@@ -108,12 +94,21 @@
           lazyLoad: 'ondemand',
           });
       });
-      $(".showroom__slide").slick({
+      $(".showroom__list").slick({
+          slidesToShow: 2 ,
           infinite: true,
           autoplay: true,
           dots: false,
           arrows: true,
-          autoplaySpeed: 4000
+          autoplaySpeed: 4000,
+          responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
 
       $('.c-product__slide').slick({
@@ -133,7 +128,8 @@
         ],
       });
 
-      //- tab
+
+      //- tab silestone
       $(document).ready(function(){
 
         $('.tabs-product__nav li').click(function(){
@@ -145,7 +141,20 @@
           $(this).addClass('current');
           $("#"+tab_id).addClass('current');
         })
+      })
 
+      //- tab dekton
+      $(document).ready(function(){
+
+        $('.tabs-product__nav-2 li').click(function(){
+          var tabs_id = $(this).attr('data-tab');
+
+          $('.tabs-product__nav-2 li').removeClass('current');
+          $('.tab-content2').removeClass('current');
+
+          $(this).addClass('current');
+          $("#"+tabs_id).addClass('current');
+        })
       })
 
       //- slide tab1
@@ -165,6 +174,7 @@
         },
       ],
       });
+
       //- slide tab2
       $('.c-product__slide--tab2').slick({
         infinite: true,
@@ -182,7 +192,56 @@
         },
       ],
       });
+
+      //- slide đá
+      $('.tabs-product__list-slide1').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        initialSlide: 3,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+      //- da dekton
+      $('.slide-dekton').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        initialSlide: 2,
+        responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      });
+
+      //- tab Latest releases
+      $(document).ready(function(){
+
+        $('.tabs-latest li').click(function(){
+          var tabx_id = $(this).attr('data-tab');
+
+          $('.tabs-latest li').removeClass('current');
+          $('.tab-latest-content').removeClass('current');
+
+          $(this).addClass('current');
+          $("#"+tabx_id).addClass('current');
+        })
+      })
+
     </script>
-	<?php wp_footer(); ?>
   </body>
 </html>

@@ -1,18 +1,5 @@
-<?php
-
-/**
- * Header file for the Twenty Twenty WordPress default theme.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since Twenty Twenty 1.0
- */
-
-?>
 <!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html lang="vi">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,9 +13,8 @@
     <noscript>
       <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     </noscript>
-	<?php wp_head(); ?>
   </head>
-  <body <?php body_class(); ?>>
+  <body>
     <div class="container">
       <header class="c-header">
         <div class="c-header_top">
@@ -37,13 +23,10 @@
               <li> <a href="#">Showroom</a></li>
               <li> <a href="#">Tin Tức</a></li>
             </ul>
-            <div class="c-header_logo">
-				<a href="/">
-					<picture>
-					<source srcset="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" type="image/svg"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" data-src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="logo">
-					</picture>
-				</a>
-			</div>
+            <div class="c-header_logo"><a href="/">
+                <picture>
+                  <source srcset="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" type="image/svg"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" data-src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="logo">
+                </picture></a></div>
           </div>
         </div>
         <div class="c-header_bottom">
