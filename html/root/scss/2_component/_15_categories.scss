@@ -1,47 +1,38 @@
 .m-category {
-    &__list {
-        display: flex;
-        margin: 0 -4px;
+    margin: 2rem 0;
+    ol {
+        margin: 0 -10px;
         flex-wrap: wrap;
-    }
-    &__item {
-        width: calc(100% / 4);
-        @include sp {
-            width: calc(100% / 2);
+        @include flex;
+        @include sp{
+            margin: 0 -5px;
         }
-    }
-    &__box {
-        margin: 8px;
-        a {
-            display: block;
-            text-decoration: none;
-        }
-        picture {
-            display: block;
-            height: 250px;
-            overflow: hidden;
-            @include sp {
-                height: 120px;
+        li{
+            width: calc(25% - 20px);
+            margin: 10px;
+            @include sp{
+                width: calc(50% - 5px);
+                margin: 0;
+                padding: 10px 5px;
             }
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                &:hover {
-                    transform: scale(1.1);
-                    transition: all .5s ease-in-out;
+            a{
+                text-decoration: none;
+                transition: scale 0.2;
+                &:hover{
+                   img{
+                     transform: scale(1.02);
+                   }
                 }
             }
-        }
-    }
-    &__txt {
-        background-color: rgb(238, 90, 7);
-        padding: 9px 0px 9px 0px;
-        text-align: center;
-        color: #fff;
-        @include sp {
-            h3 {
-                font-size: 12px;
+            h3{
+                background-color: rgb(238, 90, 7);
+                padding: 10px 0;
+                text-align: center;
+                color: #fff;
+                @include sp{
+                    font-size: 1.2rem;
+                    padding: 5px 0;
+                }
             }
         }
     }
