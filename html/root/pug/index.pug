@@ -39,12 +39,12 @@ block after_page
           },
         ],
       });
-      
+
       $('.c-product__slide').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1, 
-        arrows: true, 
+        slidesToScroll: 1,
+        arrows: true,
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -60,7 +60,7 @@ block after_page
 
       //- tab silestone
       $(document).ready(function(){
-	
+
         $('.tabs-product__nav li').click(function(){
           var tab_id = $(this).attr('data-tab');
 
@@ -71,10 +71,10 @@ block after_page
           $("#"+tab_id).addClass('current');
         })
       })
-      
+
       //- tab dekton
       $(document).ready(function(){
-	
+
         $('.tabs-product__nav-2 li').click(function(){
           var tabs_id = $(this).attr('data-tab');
 
@@ -86,12 +86,12 @@ block after_page
         })
       })
 
-      //- slide tab1 
+      //- slide tab1
       $('.c-product__slide--tab1').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1, 
-        arrows: true, 
+        slidesToScroll: 1,
+        arrows: true,
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -108,8 +108,8 @@ block after_page
       $('.c-product__slide--tab2').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1, 
-        arrows: true, 
+        slidesToScroll: 1,
+        arrows: true,
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -126,8 +126,8 @@ block after_page
       $('.tabs-product__list-slide1').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1, 
-        arrows: true, 
+        slidesToScroll: 1,
+        arrows: true,
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -139,12 +139,12 @@ block after_page
         },
       ],
       });
-      //- da dekton 
+      //- da dekton
       $('.slide-dekton').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1, 
-        arrows: true, 
+        slidesToScroll: 1,
+        arrows: true,
         dots: false,
         initialSlide: 2,
         responsive: [
@@ -156,10 +156,10 @@ block after_page
         },
       ],
       });
-       
+
       //- tab Latest releases
       $(document).ready(function(){
-	
+
         $('.tabs-latest li').click(function(){
           var tabx_id = $(this).attr('data-tab');
 
@@ -170,7 +170,7 @@ block after_page
           $("#"+tabx_id).addClass('current');
         })
       })
-     
+
 block container
   .c-carousel
     .c-carousel_inner
@@ -179,19 +179,19 @@ block container
             source(srcset='https://chus.dosi-in.com/images/promo/8/4000x1333_Web_Viehehe.jpeg' type="image/avif")
             source(srcset='https://chus.dosi-in.com/images/promo/8/4000x1333_Web_Viehehe.jpeg' type="image/webp")
             img(src='https://chus.dosi-in.com/images/promo/8/4000x1333_Web_Viehehe.jpeg' alt='carousel'  width="100%" height="100%")
-          a(href='#' taget="_blank").m-btn More Detail  
+          a(href='#' taget="_blank").m-btn More Detail
       .c-carousel_item
         a(href="#")
           picture
             source(srcset='https://chus.dosi-in.com/images/promo/8/4000x1333_Web_Viehaha.jpeg' type="image/avif")
             source(srcset='https://chus.dosi-in.com/images/promo/8/4000x1333_Web_Viehaha.jpeg' type="image/webp")
             img(src='https://chus.dosi-in.com/images/promo/8/4000x1333_Web_Viehaha.jpeg' alt='carousel'  width="100%" height="100%")
-          a(href='#' taget="_blank").m-btn More Detail 
+          a(href='#' taget="_blank").m-btn More Detail
   .l-container
 
     section.i-intros
       //- include ./_modules/heading-primary
-      .heading__primary 
+      .heading__primary
           h2 GIỚI THIỆU
       .intro
         .intro__video.intro__box
@@ -200,9 +200,9 @@ block container
             source(src='movie.ogg' type='video/ogg')
         .intro__content.intro__box
           .intro__content__item
-            h4 Text Giới thiệu Heading 
+            h4 Text Giới thiệu Heading
             p Khởi nghiệp từ năm 2009, thương hiệu cosentino đã có được vị thế và niềm tin của nhiều tổ chức, đơn vị kinh doanh, chủ đầu tư nhờ các sản phẩm có mẫu mã đẹp, độ bền cao, đội ngũ thi công hoàn chỉnh, đáp ứng tốt nhu cầu XD công nghiệp và dân dụng. Hiện tại, cosentino
-            a(href="#") xem thêm  
+            a(href="#") xem thêm
           .intro__content__btn
             a(href="" title="intro").intro__content__intro-skill
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -218,7 +218,7 @@ block container
     //- showroom
     section
       .showroom
-        .heading__primary 
+        .heading__primary
           h2 SHOWROOM
         .showroom__wrapper
           .showroom__list
@@ -246,26 +246,26 @@ block container
               .showroom__body
                 h3 KHO PHAN TRỌNG TUỆ
                 p Đ/c: Km số 2 Phan Trọng Tuệ, Thanh Trì, Hà Nội. Diện tích > 6.000m2. Hơn nghìn mẫu đá Granite, Marble, Thạch Anh, Nhân tạo hot nhất hiện nay, liên tục cập nhật các mẫu mới
-            
-    //- categories 
+
+    //- categories
     section
       .m-category
-        .heading__primary 
+        .heading__primary
             h2 HẠNG MỤC ĐÁ ỐP LÁT
         include ./_modules/categories
-    
+
     section
-      .heading__primary 
+      .heading__primary
         h2 Latest releases
       .tabs-latest
         li.tab-latest.current(data-tab="tabx-1") SUNLIT DAYS
         li.tab-latest(data-tab="tabx-2") ETHEREAL
         li.tab-latest(data-tab="tabx-3") LOFT
-      .tabs-latest__inner 
+      .tabs-latest__inner
         #tabx-1.tab-latest-content.current
           .releases__box
             .releases__box__left
-              a(href="")  
+              a(href="")
                 picture
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-A-1.jpg' type='image/avif')
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-A-1.jpg' type='image/webp')
@@ -277,11 +277,11 @@ block container
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-b.jpg' type='image/webp')
                   img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-b.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-sunlit-days-b.jpg' alt='carousel' width='100%' height='100%')
 
-    
+
         #tabx-2.tab-latest-content
           .releases__box
             .releases__box__left
-              a(href="")  
+              a(href="")
                 picture
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-a.jpg' type='image/avif')
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-ethereal-a.jpg' type='image/webp')
@@ -296,7 +296,7 @@ block container
         #tabx-3.tab-latest-content
           .releases__box
             .releases__box__left
-              a(href="")  
+              a(href="")
                 picture
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-a.jpg' type='image/avif')
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-a.jpg' type='image/webp')
@@ -309,9 +309,9 @@ block container
                   img(src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-b.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/silestone-loft-b.jpg' alt='carousel' width='100%' height='100%')
 
     //- cart product new
-    section.product 
-      .heading__primary(style="justify-content: flex-start;") 
-            h2 DÒNG ĐÁ MỚI 
+    section.product
+      .heading__primary(style="justify-content: flex-start;")
+            h2 DÒNG ĐÁ MỚI
       .c-product__slide
         .c-product__slide__item
           include ./_modules/cart_product
@@ -325,9 +325,9 @@ block container
           include ./_modules/cart_product
         .c-product__slide__item
           include ./_modules/cart_product
-      
+
     //- product tab silestone
-    section.product__tab 
+    section.product__tab
       //- .heading__primary
       //-   h2 Danh mục đá
       .tabs-product
@@ -339,11 +339,11 @@ block container
             </svg>
           ul.tabs-product__nav
             li.tab-link.current(data-tab="tab-1") Đá Granite Trắng
-            li.tab-link(data-tab="tab-2") Đá Granite tim 
+            li.tab-link(data-tab="tab-2") Đá Granite tim
             li.tab-link(data-tab="tab-3") Đá Granite do
             li.tab-link(data-tab="tab-4") Đá Granite xanh
-            li.tab-link(data-tab="tab-5") Đá Granite vang 
-          
+            li.tab-link(data-tab="tab-5") Đá Granite vang
+
         .tabs-product__stage
           #tab-1.tab-content.current
             .tabs-product__list.tabs-product__list-slide1
@@ -359,7 +359,7 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            a(href="").arrow__long 
+            a(href="").arrow__long
               span Xem thêm
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
@@ -373,8 +373,8 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-              
-            .arrow__long 
+
+            .arrow__long
               span Xem thêm
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
           #tab-3.tab-content
@@ -391,7 +391,7 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            .arrow__long 
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
@@ -401,11 +401,11 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            .arrow__long 
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
-              
+
           #tab-5.tab-content
             .tabs-product__list.tabs-product__list-slide5
               .tabs-product__item
@@ -418,13 +418,13 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            .arrow__long 
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
-    //- 
+    //-
     //- product tab dekton
-    section.product__tab 
+    section.product__tab
       .tabs-product
         .cate-home
           .cate-home-box
@@ -434,11 +434,11 @@ block container
             </svg>
           ul.tabs-product__nav-2
             li.tab-link.current(data-tab="tabs-1") Đá Granite Trắng
-            li.tab-link(data-tab="tabs-2") Đá Granite tim 
+            li.tab-link(data-tab="tabs-2") Đá Granite tim
             li.tab-link(data-tab="tabs-3") Đá Granite do
             li.tab-link(data-tab="tabs-4") Đá Granite xanh
-            li.tab-link(data-tab="tabs-5") Đá Granite vang 
-          
+            li.tab-link(data-tab="tabs-5") Đá Granite vang
+
         .tabs-product__stage
           #tabs-1.tab-content2.current
             .tabs-product__list.slide-dekton
@@ -454,7 +454,7 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            .arrow__long 
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
@@ -468,8 +468,8 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-              
-            .arrow__long 
+
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
           #tabs-3.tab-content2
@@ -486,7 +486,7 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            .arrow__long 
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
@@ -496,11 +496,11 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            .arrow__long 
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
 
-              
+
           #tabs-5.tab-content2
             .tabs-product__list
               .tabs-product__item
@@ -513,58 +513,58 @@ block container
                 include ./_modules/cart_product
               .tabs-product__item
                 include ./_modules/cart_product
-            .arrow__long 
+            .arrow__long
               span Kéo sang
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.0677 11.9929L18.818 7.75739L17.4061 9.17398L19.2415 11.0032L0.932469 11.0012L0.932251 13.0012L19.2369 13.0032L17.4155 14.8308L18.8321 16.2426L23.0677 11.9929Z" fill="currentColor" /></svg>
-  
 
 
-    
+
+
     //- service
-    //- section.services 
+    //- section.services
     //-   include ./_modules/heading-primary
-    //-   .service  
+    //-   .service
     //-     .service__wrapper
     //-       .service__list
     //-         .service__item
-    //-           .service__box 
+    //-           .service__box
     //-             a.service__img(href="" title="service")
-    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="")
     //-             a.service__text(href="" title="")
-    //-               h3 Phân phối đá vật tư 
-    //-             a(href="" title="").service__see-more 
+    //-               h3 Phân phối đá vật tư
+    //-             a(href="" title="").service__see-more
     //-               span  see more
     //-         .service__item
-    //-           .service__box 
+    //-           .service__box
     //-             a.service__img(href="" title="service")
-    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="")
     //-             a.service__text(href="" title="")
-    //-               h3 Phân phối đá vật tư 
-    //-             a(href="" title="").service__see-more 
+    //-               h3 Phân phối đá vật tư
+    //-             a(href="" title="").service__see-more
     //-               span  see more
     //-         .service__item
-    //-           .service__box 
+    //-           .service__box
     //-             a.service__img(href="" title="service")
-    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="")
     //-             a.service__text(href="" title="")
-    //-               h3 Phân phối đá vật tư 
-    //-             a(href="" title="").service__see-more 
+    //-               h3 Phân phối đá vật tư
+    //-             a(href="" title="").service__see-more
     //-               span  see more
     //-         .service__item
-    //-           .service__box 
+    //-           .service__box
     //-             a.service__img(href="" title="service")
-    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="")
     //-             a.service__text(href="" title="")
-    //-               h3 Phân phối đá vật tư 
-    //-             a(href="" title="").service__see-more 
+    //-               h3 Phân phối đá vật tư
+    //-             a(href="" title="").service__see-more
     //-               span  see more
     //-         .service__item
-    //-           .service__box 
+    //-           .service__box
     //-             a.service__img(href="" title="service")
-    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="") 
+    //-               img(src="https://www.prime.vn/assets/frontend/images/news-lg-2.jpg", alt="")
     //-             a.service__text(href="" title="")
-    //-               h3 Phân phối đá vật tư 
-    //-             a(href="" title="").service__see-more 
+    //-               h3 Phân phối đá vật tư
+    //-             a(href="" title="").service__see-more
     //-               span  see more
 
 
@@ -581,8 +581,8 @@ block container
                 source(srcset='https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg' type='image/avif')
                 source(srcset='https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg' type='image/webp')
                 img(src='https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg' alt='carousel' width='100%' height='100%')
-            a(href="").style__cart__cate Designers
-            p.style__cart__content Patternity
+              h3.style__cart__cate Designers
+              p.style__cart__content Patternity
         .style__feature-right
           .style__cart__list
             .style__cart__item
@@ -591,51 +591,32 @@ block container
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg' type='image/avif')
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg' type='image/webp')
                   img(src='https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg' alt='carousel' width='100%' height='100%')
-              a(href="").style__cart__cate TOP HOMES
-              p.style__cart__content Natural stone plays a key role in this house in Turkey
+                h3.style__cart__cate TOP HOMES
+                p.style__cart__content Natural stone plays a key role in this house in Turkey
             .style__cart__item
               a(href="" title="feature")
                 picture
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/Casa-Vera-0076_1-1536x1151.jpg' type='image/avif')
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/Casa-Vera-0076_1-1536x1151.jpg' type='image/webp')
                   img(src='https://www.cosentino.com/wp-content/uploads/2022/08/Casa-Vera-0076_1-1536x1151.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/08/Casa-Vera-0076_1-1536x1151.jpg' alt='carousel' width='100%' height='100%')
-              a(href="").style__cart__cate TOP HOMES
-              p.style__cart__content A Mediterranean style home with a contemporary character thanks to Dekton
+                h3.style__cart__cate TOP HOMES
+                p.style__cart__content A Mediterranean style home with a contemporary character thanks to Dekton
             .style__cart__item
               a(href="" title="feature")
                 picture
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/Credit-@sifmeincke.jpeg' type='image/avif')
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/Credit-@sifmeincke.jpeg' type='image/webp')
                   img(src='https://www.cosentino.com/wp-content/uploads/2022/08/Credit-@sifmeincke.jpeg' data-src='https://www.cosentino.com/wp-content/uploads/2022/08/Credit-@sifmeincke.jpeg' alt='carousel' width='100%' height='100%')
-              a(href="").style__cart__cate TOP HOMES
-              p.style__cart__content A touch of paint and a Silestone worktop for the renovation of a beautiful and modern kitchen
+                h3.style__cart__cate TOP HOMES
+                p.style__cart__content A touch of paint and a Silestone worktop for the renovation of a beautiful and modern kitchen
             .style__cart__item
               a(href="" title="feature")
                 picture
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/avif')
                   source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/webp')
                   img(src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' alt='carousel' width='100%' height='100%')
-              a(href="").style__cart__cate TOP HOMES
-              p.style__cart__content A luxury house full of contrasts in Turkey
-    //- //- xu hươngs
-    //- section.product 
-    //-   .heading__primary
-    //-     h2 Sản phẩm nổi bật
-    //-   //- include ./_modules/heading-primary
-    //-   .c-product__slide
-    //-     .c-product__slide__item
-    //-       include ./_modules/cart_product
-    //-     .c-product__slide__item
-    //-       include ./_modules/cart_product
-    //-     .c-product__slide__item
-    //-       include ./_modules/cart_product
-    //-     .c-product__slide__item
-    //-       include ./_modules/cart_product
-    //-     .c-product__slide__item
-    //-       include ./_modules/cart_product
-    //-     .c-product__slide__item
-    //-       include ./_modules/cart_product
-    
+                h3.style__cart__cate TOP HOMES
+                p.style__cart__content A luxury house full of contrasts in Turkey
     //- giải pháp (tin tức)
     section.solution
       .heading__primary
@@ -643,48 +624,48 @@ block container
       p.solution__txt Through its brands, Silestone, Dekton, and Sensa, Cosentino provides sustainable design surfaces and a global services network to bring any project to life.
       .solution__list
         .solution__item
-          a(href="" title="solution") 
+          a(href="" title="solution")
             picture
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-1-Ultra-compact-facadesArchitectura.jpg' type='image/avif')
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-1-Ultra-compact-facadesArchitectura.jpg' type='image/webp')
               img(src='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-1-Ultra-compact-facadesArchitectura.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-1-Ultra-compact-facadesArchitectura.jpg' alt='carousel' width='100%' height='100%')
             h3 Ultra compact façades
         .solution__item
-          a(href="" title="solution") 
+          a(href="" title="solution")
             picture
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158-X1000-2-High-Performance-FlooringsArchitectura.jpg' type='image/avif')
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158-X1000-2-High-Performance-FlooringsArchitectura.jpg' type='image/webp')
               img(src='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158-X1000-2-High-Performance-FlooringsArchitectura.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158-X1000-2-High-Performance-FlooringsArchitectura.jpg' alt='carousel' width='100%' height='100%')
             h3 High-performance flooring
         .solution__item
-          a(href="" title="solution") 
+          a(href="" title="solution")
             picture
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-3-Professional-KitchenArchitectura.jpg' type='image/avif')
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-3-Professional-KitchenArchitectura.jpg' type='image/webp')
               img(src='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-3-Professional-KitchenArchitectura.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/04/Home-1158x1000-3-Professional-KitchenArchitectura.jpg' alt='carousel' width='100%' height='100%')
             h3 Professional kitchens
         .solution__item
-          a(href="" title="solution") 
+          a(href="" title="solution")
             picture
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/avif')
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/webp')
               img(src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' alt='carousel' width='100%' height='100%')
             h3 Ultra compact façades
         .solution__item
-          a(href="" title="solution") 
+          a(href="" title="solution")
             picture
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/avif')
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/webp')
               img(src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' alt='carousel' width='100%' height='100%')
             h3 Ultra compact façades
         .solution__item
-          a(href="" title="solution") 
+          a(href="" title="solution")
             picture
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/avif')
               source(srcset='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' type='image/webp')
               img(src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' data-src='https://www.cosentino.com/wp-content/uploads/2022/08/ZMY_0258-1-1536x1024.jpg' alt='carousel' width='100%' height='100%')
             h3 Ultra compact façades
 
-    
+
     //- footer v1
     include _modules/footer-v1.pug
