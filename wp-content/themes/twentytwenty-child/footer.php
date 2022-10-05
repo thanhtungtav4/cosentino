@@ -1,12 +1,108 @@
-</main>
+<div class="footer-sub"> 
+            <div class="footer-sub__list"> 
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Silestone</p>
+                  <ul> 
+                    <li><a href="#">What is Silestone</a></li>
+                    <li><a href="#">Maintenance</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Products</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Dekton</p>
+                  <ul> 
+                    <li><a href="#">What is Dekton</a></li>
+                    <li><a href="#">Maintenance</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Products</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Sensa</p>
+                  <ul> 
+                    <li><a href="#">What is Sensa</a></li>
+                    <li><a href="#">Maintenance</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Products</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Scalea</p>
+                  <ul> 
+                    <li><a href="#">What is Scalea</a></li>
+                    <li><a href="#">Maintenance</a></li>
+                    <li><a href="#">Products</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Applications</p>
+                  <ul> 
+                    <li><a href="#">Facades</a></li>
+                    <li><a href="#">Flooring and paving</a></li>
+                    <li><a href="#">Flooring and paving</a></li>
+                    <li><a href="#">Coating</a></li>
+                    <li><a href="#">Kitchens</a></li>
+                    <li><a href="#">Bathrooms</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Spaces</p>
+                  <ul> 
+                    <li><a href="#">Bathrooms</a></li>
+                    <li><a href="#">Livings rooms</a></li>
+                    <li><a href="#">Kitchens    </a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Exteriors</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Digital Tools</p>
+                  <ul> 
+                    <li><a href="#">Online Visualizer</a></li>
+                    <li><a href="#">3d-kitchen</a></li>
+                    <li><a href="#">Moodboards</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-sub__item"> 
+                <div class="footer-sub__box">
+                  <p>Inspiration</p>
+                  <ul> 
+                    <li><a href="#">What is Silestone</a></li>
+                    <li><a href="#">What is Silestone</a></li>
+                    <li><a href="#">What is Silestone</a></li>
+                    <li><a href="#">What is Silestone What is Silestone What is Silestone </a></li>
+                    <li><a href="#">What is Silestone</a></li>
+                    <li><a href="#">What is Silestone What is Silestone  What is Silestone </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
       <footer class="c-footer">
         <div class="footer__wrapper">
           <div class="l-container">
             <div class="footer__logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt="" width="50" height="50"></div>
-            <div class="footer__list">
+            <div class="footer__list"> 
               <div class="footer__item">
                 <div class="footer__item__ttl">Corporate</div>
-                <ul>
+                <ul> 
                   <li><a href="">Cosentino</a></li>
                   <li><a href="">R&D and Innovation</a></li>
                   <li><a href="">Safety at Cosentino</a></li>
@@ -20,7 +116,7 @@
               </div>
               <div class="footer__item">
                 <div class="footer__item__ttl">Customer Support</div>
-                <ul>
+                <ul> 
                   <li><a href="">Contact</a></li>
                   <li><a href="">Warranty | Silestone</a></li>
                   <li><a href="">Warranty | Dekton</a></li>
@@ -31,7 +127,7 @@
               </div>
               <div class="footer__item">
                 <div class="footer__item__ttl">Professional Area</div>
-                <ul>
+                <ul> 
                   <li><a href="">Cosentino We</a></li>
                   <li><a href="">Cosentino Center</a></li>
                   <li><a href="">Cosentino City</a></li>
@@ -40,7 +136,7 @@
               </div>
               <div class="footer__item">
                 <div class="footer__item__ttl">Employment</div>
-                <ul>
+                <ul> 
                   <li><a href="">Join Cosentino</a></li>
                   <li><a href="">Cosentino</a></li>
                   <li><a href="">Cosentino</a></li>
@@ -51,14 +147,14 @@
               </div>
               <div class="footer__item">
                 <div class="footer__item__ttl">Service Provider</div>
-                <ul>
+                <ul> 
                   <li><a href="">Supplier Portal</a></li>
                   <li><a href="">General Purchase Conditions</a></li>
                 </ul>
               </div>
               <div class="footer__item">
                 <div class="footer__item__ttl">Resources</div>
-                <ul>
+                <ul> 
                   <li><a href="">c-magazine</a></li>
                   <li><a href="">c-top-magazine</a></li>
                   <li><a href="">Downloads</a></li>
@@ -110,12 +206,12 @@
           },
         ],
       });
-
+      
       $('.c-product__slide').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
+        slidesToScroll: 1, 
+        arrows: true, 
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -127,42 +223,42 @@
           },
         ],
       });
-
-
+      
+      
       //- tab silestone
       $(document).ready(function(){
-
+      
         $('.tabs-product__nav li').click(function(){
           var tab_id = $(this).attr('data-tab');
-
+      
           $('.tabs-product__nav li').removeClass('current');
           $('.tab-content').removeClass('current');
-
+      
           $(this).addClass('current');
           $("#"+tab_id).addClass('current');
         })
       })
-
+      
       //- tab dekton
       $(document).ready(function(){
-
+      
         $('.tabs-product__nav-2 li').click(function(){
           var tabs_id = $(this).attr('data-tab');
-
+      
           $('.tabs-product__nav-2 li').removeClass('current');
           $('.tab-content2').removeClass('current');
-
+      
           $(this).addClass('current');
           $("#"+tabs_id).addClass('current');
         })
       })
-
-      //- slide tab1
+      
+      //- slide tab1 
       $('.c-product__slide--tab1').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
+        slidesToScroll: 1, 
+        arrows: true, 
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -174,13 +270,13 @@
         },
       ],
       });
-
+      
       //- slide tab2
       $('.c-product__slide--tab2').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
+        slidesToScroll: 1, 
+        arrows: true, 
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -192,13 +288,13 @@
         },
       ],
       });
-
+      
       //- slide đá
       $('.tabs-product__list-slide1').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
+        slidesToScroll: 1, 
+        arrows: true, 
         dots: false,
         initialSlide: 3,
         responsive: [
@@ -210,12 +306,12 @@
         },
       ],
       });
-      //- da dekton
+      //- da dekton 
       $('.slide-dekton').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: true,
+        slidesToScroll: 1, 
+        arrows: true, 
         dots: false,
         initialSlide: 2,
         responsive: [
@@ -227,21 +323,21 @@
         },
       ],
       });
-
+       
       //- tab Latest releases
       $(document).ready(function(){
-
+      
         $('.tabs-latest li').click(function(){
           var tabx_id = $(this).attr('data-tab');
-
+      
           $('.tabs-latest li').removeClass('current');
           $('.tab-latest-content').removeClass('current');
-
+      
           $(this).addClass('current');
           $("#"+tabx_id).addClass('current');
         })
       })
-
+      
     </script>
   </body>
 </html>

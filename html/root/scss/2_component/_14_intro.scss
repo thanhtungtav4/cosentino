@@ -61,10 +61,6 @@
         }
     }
     &__btn {
-        // position: absolute;
-        // right: 16px;
-        // left: 16px;
-        // bottom: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -98,7 +94,6 @@
         color: #fff !important;
     }
 }
-
 // show room 
 .showroom {
     &__item {
@@ -119,7 +114,6 @@
         }
     }
 }
-
 // 
 .tab-latest-content {
     display: none;
@@ -135,14 +129,10 @@
     li {
         list-style: none;
         padding: 8px;
-        // border: 1px solid $border-color;
         border-radius: 999px;
         font-weight: 500;
-        line-height: 150%;
-        letter-spacing: 0.01em;
         color: #101010;
         text-transform: uppercase;
-        font-size: 14px;
         cursor: pointer;
         &.current {
             border: 3px solid #000;

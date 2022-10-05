@@ -1,12 +1,13 @@
 .c-product {
-    &__item {
-        border: 1px solid $border-color;
-        border-radius: 8px;
-        overflow: hidden;
+    a {
+        text-decoration: none
     }
     &__img {
         height: 250px;
         width: 100%;
+        overflow: hidden;
+        border: 1px solid $border-color;
+        border-radius: 8px;
         overflow: hidden;
         img {
             height: 100%;
@@ -21,10 +22,7 @@
     }
     &__body {
         padding: 16px;
-        text-align: center;
-        a {
-            text-decoration: none
-        }
+        text-align: cener;
         h3 {
             @include font-config(14px, 500);
             @include text-spacing();
