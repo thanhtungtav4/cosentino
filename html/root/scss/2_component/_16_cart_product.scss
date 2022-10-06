@@ -34,6 +34,13 @@
             -webkit-box-orient: vertical;
             display: -webkit-box;
         }
+        p{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            color: #505050;
+        }
     }
     &__code {
         margin-bottom: 4px;

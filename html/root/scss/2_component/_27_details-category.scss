@@ -68,10 +68,8 @@
                 }
             }
             p {
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 150%;
-                letter-spacing: 0.01em;
+                font-size: 16px;
+                line-height: 1.5;
             }
         }
     }
@@ -86,7 +84,6 @@
 
 .d-category__cta {
     display: flex;
-    // align-items: center;
     justify-content: space-between;
     @include sp {
         flex-wrap: wrap;
