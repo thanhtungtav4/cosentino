@@ -6,7 +6,3 @@
 /***
  * !Disable Gutenberg with Code
  */
-/****
- * https://stackoverflow.com/questions/14396735/woocommerce-custom-price-range-in-url
- * https://gitlab.com/vncloudsco
- */
