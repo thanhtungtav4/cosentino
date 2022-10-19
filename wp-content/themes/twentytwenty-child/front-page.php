@@ -18,8 +18,8 @@ get_header();
         <?php require( get_stylesheet_directory() . '/module/intro.php' ); ?>
         <?php require( get_stylesheet_directory() . '/module/showroom.php' ); ?>
         <?php require( get_stylesheet_directory() . '/module/rock.php' ); ?>
-
         <?php require( get_stylesheet_directory() . '/module/rock_intro.php'); ?>
+        <?php require( get_stylesheet_directory() . '/module/trends.php'); ?>
     </div>
 <?php
 get_footer();
