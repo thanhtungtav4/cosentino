@@ -1,32 +1,47 @@
+<?php
+$trendData = get_field('style_trends', front_page_id());
+if($trendData) :
+?>
 <section>
     <div class="heading__primary">
         <h2>Styles &amp; Trends</h2>
     </div>
     <div class="style__inner">
-        <div class="style__feature-left">
-        <div class="style__cart__item-c"><a href="" title="feature">
-            <picture>
-                <source srcset="https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg" type="image/avif">
-                <source srcset="https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg" type="image/webp">
-                <img src="https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg" data-src="https://www.cosentino.com/wp-content/uploads/2020/12/CE6I8503.jpg" alt="carousel" width="100%" height="100%">
-            </picture>
-            <h3 class="style__cart__cate">Designers</h3>
-            <p class="style__cart__content">Patternity</p></a></div>
-        </div>
-        <div class="style__feature-right">
-            <div class="style__cart__list">
-                <div class="style__cart__item">
+        <?php  foreach($trendData as $key => $item) :
+            $style_category_name = $item['style_category_name'];
+            $name_style = $item['name_style'];
+            ?>
+            <?php if($key == 0 ) : ?>
+            <div class="style__feature-left">
+                <div class="style__cart__item-c">
                     <a href="" title="feature">
                         <picture>
-                            <source srcset="https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg" type="image/avif">
-                            <source srcset="https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg" type="image/webp">
-                            <img src="https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg" data-src="https://www.cosentino.com/wp-content/uploads/2022/07/79Warren-1.jpg" alt="carousel" width="100%" height="100%">
+                        <?php echo wp_get_attachment_image($item['image'], 'big_trend-thumb'); ?>
                         </picture>
-                        <h3 class="style__cart__cate">TOP HOMES</h3>
-                        <p class="style__cart__content">Natural stone plays a key role in this house in Turkey</p>
+                        <h3 class="style__cart__cate"><?php echo $style_category_name ?></h3>
+                        <p class="style__cart__content"><?php echo $name_style ?></p>
                     </a>
                 </div>
             </div>
-        </div>
+            <div class="style__feature-right">
+                <div class="style__cart__list">
+            <?php endif; ?>
+            <?php if($key >=1) :?>
+                    <div class="style__cart__item">
+                        <a href="" title="feature">
+                            <picture>
+                                <?php echo wp_get_attachment_image($item['image'], 'smail_trend-thumb'); ?>
+                            </picture>
+                            <h3 class="style__cart__cate"><?php echo $style_category_name ?></h3>
+                            <p class="style__cart__content"><?php echo $name_style ?></p>
+                        </a>
+                    </div>
+                <?php if($key == 0 ) : ?>
+                </div>
+            </div>
+            <?php endif; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </section>
+<?php endif; ?>

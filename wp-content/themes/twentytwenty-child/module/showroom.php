@@ -15,13 +15,11 @@
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                     <div class="showroom__item">
                         <picture>
-                        <source srcset="https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg" type="image/avif">
-                        <source srcset="https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg" type="image/webp">
-                        <img src="https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg" data-src="https://sieuthida.vn/wp-content/uploads/2020/05/kho-phan-tr%E1%BB%8Dng-tu%E1%BB%87.jpg" alt="carousel" width="100%" height="100%">
+                            <img loading="lazy" data-src="<?php the_post_thumbnail_url('showroom-thumb'); ?>" src="<?php the_post_thumbnail_url('showroom-thumb'); ?>" alt="<?php echo the_title() ?>" width="434" height="291">
                         </picture>
                         <div class="showroom__body">
-                        <h3>KHO PHAN TRỌNG TUỆ</h3>
-                        <p>Đ/c: Km số 2 Phan Trọng Tuệ, Thanh Trì, Hà Nội. Diện tích > 6.000m2. Hơn nghìn mẫu đá Granite, Marble, Thạch Anh, Nhân tạo hot nhất hiện nay, liên tục cập nhật các mẫu mới</p>
+                        <h3><?php echo the_title() ?></h3>
+                        <p><?php echo the_excerpt() ?></p>
                         </div>
                     </div>
                 <?php endwhile; ?>

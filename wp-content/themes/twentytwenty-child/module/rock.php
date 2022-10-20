@@ -15,7 +15,7 @@
                         <h3><?php echo $name ?></h3>
                     </a>
                 </li>
-            <?php endwhile; ?>    
+            <?php endwhile; ?>
             </ol>
     </section>
-<?php endif; ?>    
+<?php endif; ?>
