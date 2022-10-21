@@ -10,6 +10,9 @@ get_header(); ?>
   justify-content: center;
   align-items: center;
 }
+.searchform{
+  margin: 3rem 0;
+}
 .m-404 #errorText {
   font-size: 22px;
   margin: 14px 0;
@@ -169,6 +172,14 @@ get_header(); ?>
 	</svg>
 
 	<p id="errorText">O-o-oh! Something broke.</p>
+  <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+    <div>
+      <label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
+      <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
+      <input type="submit" id="searchsubmit"
+        value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>" />
+    </div>
+  </form>
 	<a id="errorLink" href="/">Go Back</a>
       </div>
 	</div>
