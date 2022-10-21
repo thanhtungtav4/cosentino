@@ -14,7 +14,7 @@ if($trendData) :
             <?php if($key == 0 ) : ?>
             <div class="style__feature-left">
                 <div class="style__cart__item-c">
-                    <a href="" title="feature">
+                    <a href="<?php echo $item['link_to'] ?>" title="feature">
                         <picture>
                         <?php echo wp_get_attachment_image($item['image'], 'big_trend-thumb'); ?>
                         </picture>
@@ -28,7 +28,7 @@ if($trendData) :
             <?php endif; ?>
             <?php if($key >=1) :?>
                     <div class="style__cart__item">
-                        <a href="" title="feature">
+                        <a href="<?php echo $item['link_to'] ?>" title="feature">
                             <picture>
                                 <?php echo wp_get_attachment_image($item['image'], 'smail_trend-thumb'); ?>
                             </picture>

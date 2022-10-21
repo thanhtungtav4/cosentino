@@ -1,5 +1,5 @@
-<?php 
-$rockData = get_field('type_rock');
+<?php
+$rockData = get_field('type_rock', front_page_id());
 if($rockData) :
 ?>
 <section>
@@ -37,4 +37,4 @@ if($rockData) :
         <?php endforeach; ?>
     </div>
 </section>
-<?php endif; ?>          
+<?php endif; ?>
