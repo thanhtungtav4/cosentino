@@ -9,6 +9,7 @@ get_header(); ?>
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 .searchform{
   margin: 3rem 0;
@@ -35,7 +36,9 @@ get_header(); ?>
   -webkit-animation: an1 12s 0.5s infinite ease-out;
           animation: an1 12s 0.5s infinite ease-out;
 }
-
+.m-404 > svg{
+  max-width: 100%;
+}
 @-webkit-keyframes an1 {
   0% {
     transform: rotate(0);
@@ -180,7 +183,7 @@ get_header(); ?>
         value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>" />
     </div>
   </form>
-	<a id="errorLink" href="/">Go Back</a>
+	<a id="errorLink" href="<?php echo esc_url( home_url( '/' ) ); ?>">Quay Lại Trang chủ</a>
       </div>
 	</div>
 <?php
